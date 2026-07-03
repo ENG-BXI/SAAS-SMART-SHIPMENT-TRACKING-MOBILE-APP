@@ -7,6 +7,7 @@ import {z} from 'zod';
 import {useForm, Controller} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import Feather from '@expo/vector-icons/Feather';
+import {router} from 'expo-router';
 
 const formSchema = z.object({
   email: z.email('Email Is Required').min(3, 'Email Must be Greater Than 3 Letter '),
@@ -19,7 +20,10 @@ const Login = () => {
     resolver: zodResolver(formSchema)
   });
   function onSubmit(data: FormData) {
+    console.log('====================================');
     console.log(data);
+    console.log('====================================');
+    router.replace('/home');
   }
   return (
     <View className='h-screen justify'>

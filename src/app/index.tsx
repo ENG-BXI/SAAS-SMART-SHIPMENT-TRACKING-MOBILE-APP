@@ -3,7 +3,7 @@ import {useEffect} from 'react';
 
 export default function Index() {
   useEffect(() => {
-    router.replace('/onboarding');
+    router.replace('/home');
   }, []);
   return null;
 }
