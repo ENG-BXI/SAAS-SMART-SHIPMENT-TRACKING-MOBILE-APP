@@ -10,9 +10,9 @@ function HelpCenter() {
     Linking.openURL(`tel:${phoneNumber}`);
   };
   return (
-    <Pressable onPress={handleCall} className='flex-row gap-4 items-center p-4 border border-gray-300 rounded-3xl mt-4'>
+    <Pressable onPress={handleCall} className='flex-row gap-4 items-center p-2 border border-gray-300 rounded-3xl mt-4'>
       <View className='p-3 bg-[#F5FBF5] rounded-xl'>
-        <Zocial name='call' size={24} color='green' />
+        <Zocial name='call' size={20} color='green' />
       </View>
       <View className='flex-1 gap-1'>
         <Text className='text-xl font-bold'>Help Center</Text>

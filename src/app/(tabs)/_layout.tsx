@@ -10,7 +10,12 @@ const AppLayout = () => {
       screenOptions={{
         headerShown: false,
         sceneStyle: {paddingHorizontal: 16},
-        tabBarActiveTintColor: 'green'
+        tabBarActiveTintColor: 'green',
+        tabBarStyle: {
+          height: 55,
+          paddingBottom: 6,
+          paddingTop: 6
+        }
       }}
     >
       <Tabs.Screen

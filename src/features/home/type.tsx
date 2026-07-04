@@ -46,22 +46,22 @@ export const timelineData = [
 ];
 export const boxesData = [
   {
-    icon: <Feather name='box' size={30} color='green' />,
+    icon: <Feather name='box' size={20} color='green' />,
     name: 'Total Point',
     data: '3'
   },
   {
-    icon: <Feather name='check-circle' size={30} color='green' />,
+    icon: <Feather name='check-circle' size={20} color='green' />,
     name: 'Completed',
     data: '1'
   },
   {
-    icon: <MaterialCommunityIcons name='truck-delivery-outline' size={30} color='green' />,
+    icon: <MaterialCommunityIcons name='truck-delivery-outline' size={20} color='green' />,
     name: 'Remainder',
     data: '2'
   },
   {
-    icon: <MaterialCommunityIcons name='progress-star' size={30} color='green' />,
+    icon: <MaterialCommunityIcons name='progress-star' size={20} color='green' />,
     name: 'Progress',
     data: '50%'
   }
