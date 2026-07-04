@@ -6,7 +6,7 @@ interface CustomHeaderProps {
 }
 const CustomHeader = ({title}: CustomHeaderProps) => {
   return (
-    <View className='items-center py-4'>
+    <View className='items-center pt-4'>
       <Text className='font-bold text-xl'>{title}</Text>
     </View>
   );

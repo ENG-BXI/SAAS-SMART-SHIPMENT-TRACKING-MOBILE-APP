@@ -26,7 +26,7 @@ const Login = () => {
     router.replace('/home');
   }
   return (
-    <View className='h-screen justify'>
+    <View className='h-screen justify px-4'>
       <KeyboardAvoidingView style={{flex: 1}} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
         <ScrollView contentContainerStyle={{flexGrow: 1, justifyContent: 'center'}} keyboardShouldPersistTaps='handled'>
           <Text className='text-3xl font-bold'>Login</Text>
