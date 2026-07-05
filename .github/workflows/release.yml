@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write   # 👈 هذا يعطي GITHUB_TOKEN صلاحية إنشاء releases
+
 jobs:
   build:
     runs-on: ubuntu-latest

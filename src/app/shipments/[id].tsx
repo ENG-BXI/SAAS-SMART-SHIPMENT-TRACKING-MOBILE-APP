@@ -1,13 +1,8 @@
-import {Text} from '@/components/ui/text';
+import ShipmentDetails from '@/features/shipments/shipmentDetails';
 import React from 'react';
-import { View } from 'react-native';
 
-const ShipmentDetails = () => {
-  return (
-    <View>
-      <Text>Details PAge</Text>
-    </View>
-  );
+const Index = () => {
+  return <ShipmentDetails />;
 };
 
-export default ShipmentDetails;
+export default Index;
