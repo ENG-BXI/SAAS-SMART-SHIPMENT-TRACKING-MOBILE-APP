@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
     steps:
       - name: Checkout repo
@@ -26,24 +28,24 @@ jobs:
 
       - name: Build Android app
         run: eas build --platform android --non-interactive --wait
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: Get latest build ID
         run: |
-          npx eas-cli build:list --platform android --limit 1 --json > build.json
+          eas build:list --platform android --limit 1 --non-interactive --json > build.json
 
       - name: Extract build ID
         run: |
-          node -e "const fs=require('fs'); const j=JSON.parse(fs.readFileSync('build.json')); console.log(j[0].id)" > build_id.txt
+          node -e "const fs=require('fs'); const j=JSON.parse(fs.readFileSync('build.json')); const build = Array.isArray(j) ? j[0] : j.builds[0]; console.log(build.id)" > build_id.txt
 
       - name: Download APK
         run: |
-          npx eas-cli build:download --id $(cat build_id.txt) --output app.apk
+          eas build:download --id "$(cat build_id.txt)" --output app.apk
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: app.apk
+          name: Release ${{ github.ref_name }}
+          generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
