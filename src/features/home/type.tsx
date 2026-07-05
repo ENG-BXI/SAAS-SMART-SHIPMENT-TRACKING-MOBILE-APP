@@ -1,8 +1,15 @@
 import Feather from '@expo/vector-icons/Feather';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import React from 'react';
-
-export const timelineData = [
+export interface ITimeline {
+  id: string;
+  title: string;
+  isCompleted: boolean;
+  isCurrent: boolean;
+  isNext: boolean;
+  isLast: boolean;
+}
+export const timelineData: ITimeline[] = [
   {
     id: '1',
     title: 'Order Created',

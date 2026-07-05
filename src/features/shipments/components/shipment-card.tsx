@@ -1,5 +1,4 @@
 import {Text} from '@/components/ui/text';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
 import {Pressable, View} from 'react-native';
 import {ShipmentCardProps} from '../type';

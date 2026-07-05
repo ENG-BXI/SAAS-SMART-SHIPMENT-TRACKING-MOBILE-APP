@@ -4,7 +4,7 @@ import {boxesData} from '../type';
 import BoxInfo from './box-info';
 const Boxes = () => {
   return (
-    <View className='flex-row justify-between mt-5 px-4'>
+    <View className='flex-row justify-between mt-5 gap-4 px-4'>
       {boxesData.map(box => {
         return <BoxInfo key={box.name} {...box} />;
       })}
