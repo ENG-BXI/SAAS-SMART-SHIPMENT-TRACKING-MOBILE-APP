@@ -39,8 +39,8 @@ jobs:
 
       - name: Download APK
         run: |
-          eas build:download --id "$(cat build_id.txt)" --output app.apk
-
+          eas build:download --id "$(cat build_id.txt)" --platform android --path app.apk --non-interactive
+          
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
