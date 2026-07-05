@@ -6,7 +6,7 @@ on:
       - 'v*'
 
 permissions:
-  contents: write   # 👈 هذا يعطي GITHUB_TOKEN صلاحية إنشاء releases
+  contents: write
 
 jobs:
   build:
