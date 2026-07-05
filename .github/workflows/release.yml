@@ -3,7 +3,7 @@ name: Expo Build & Release
 on:
   push:
     tags:
-      - "v*"
+      - 'v*'
 
 jobs:
   build:
@@ -24,21 +24,22 @@ jobs:
       - name: Install EAS CLI
         run: npm install -g eas-cli
 
-      - name: Login to Expo
-        run: eas whoami
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-
       - name: Build Android app
         run: eas build --platform android --non-interactive --wait
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
-      - name: Download latest build artifact
+      - name: Get latest build ID
         run: |
-          npx eas-cli build:download --platform android --latest --output app.apk
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+          npx eas-cli build:list --platform android --limit 1 --json > build.json
+
+      - name: Extract build ID
+        run: |
+          node -e "const fs=require('fs'); const j=JSON.parse(fs.readFileSync('build.json')); console.log(j[0].id)" > build_id.txt
+
+      - name: Download APK
+        run: |
+          npx eas-cli build:download --id $(cat build_id.txt) --output app.apk
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
