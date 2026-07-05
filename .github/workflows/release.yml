@@ -29,18 +29,25 @@ jobs:
       - name: Build Android app
         run: eas build --platform android --non-interactive --wait
 
-      - name: Get latest build ID
+      - name: Get latest build info
         run: |
           eas build:list --platform android --limit 1 --non-interactive --json > build.json
 
-      - name: Extract build ID
+      - name: Extract APK download URL
         run: |
-          node -e "const fs=require('fs'); const j=JSON.parse(fs.readFileSync('build.json')); const build = Array.isArray(j) ? j[0] : j.builds[0]; console.log(build.id)" > build_id.txt
+          node -e "
+            const fs = require('fs');
+            const j = JSON.parse(fs.readFileSync('build.json'));
+            const build = Array.isArray(j) ? j[0] : j.builds[0];
+            const url = build.artifacts?.buildUrl;
+            if (!url) { throw new Error('No buildUrl found in build data'); }
+            console.log(url);
+          " > apk_url.txt
 
       - name: Download APK
         run: |
-          eas build:download --id "$(cat build_id.txt)" --platform android --path app.apk --non-interactive
-          
+          curl -L -o app.apk "$(cat apk_url.txt)"
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
