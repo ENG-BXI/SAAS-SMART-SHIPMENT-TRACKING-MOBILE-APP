@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream:src/app/(app)/login.tsx
 import CustomHeader from '@/components/custom-header';
 import CustomInput from '@/components/custom-input';
 import {Button} from '@/components/ui/button';
@@ -9,22 +8,27 @@ import {useForm, Controller} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import Feather from '@expo/vector-icons/Feather';
 import {router} from 'expo-router';
+import {useLogin} from './api';
+import AntDesign from '@expo/vector-icons/AntDesign';
+import {FormData, loginFormSchema} from './type';
 
-const formSchema = z.object({
-  email: z.email('Email Is Required').min(3, 'Email Must be Greater Than 3 Letter '),
-  password: z.string('Password Is Required').min(8, 'Password Must be Greater Than 8 Letter').max(100, 'Password Must be Less Than 100 Letter')
-});
-type FormData = z.infer<typeof formSchema>;
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState();
   const {control, handleSubmit} = useForm<FormData>({
-    resolver: zodResolver(formSchema)
+    resolver: zodResolver(loginFormSchema)
   });
+  const {mutate, isPending} = useLogin();
   function onSubmit(data: FormData) {
-    console.log('====================================');
-    console.log(data);
-    console.log('====================================');
-    router.replace('/home');
+    mutate(data, {
+      onSuccess: s => {
+        router.replace('/home');
+      },
+      onError: (error: any) => {
+        const message = error?.response?.data?.message ?? 'حدث خطأ غير متوقع';
+        setError(message);
+      }
+    });
   }
   return (
     <View className='h-screen justify px-4'>
@@ -61,8 +65,9 @@ const Login = () => {
               );
             }}
           />
-          <Button onPress={handleSubmit(onSubmit)} variant={'primary'} size={'lg'} className='mt-5'>
-            <Text className='text-white'>Continue</Text>
+          {error && <Text className='text-sm text-red-500'>{error}</Text>}
+          <Button disabled={isPending} onPress={handleSubmit(onSubmit)} variant={'primary'} size={'lg'} className='mt-5'>
+            {isPending ? <AntDesign name='loading-3-quarters' className='animate-spin' size={24} color='black' /> : <Text className='text-white'>Continue</Text>}
           </Button>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -71,6 +76,3 @@ const Login = () => {
 };
 
 export default Login;
-=======
-export {default} from '@/features/auth';
->>>>>>> Stashed changes:src/app/(auth)/login.tsx
