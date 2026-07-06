@@ -12,7 +12,7 @@ const ShipmentDetails = () => {
   const isFinish = false;
   return (
     <View className='px-4 flex-1'>
-      <CustomHeader title='Shipment #SH-10025' description='Active' descriptionClassName='text-custom-primary-color' />
+      <CustomHeader title='Shipment #SH-10025' hasBack description='Active' descriptionClassName='text-custom-primary-color' />
       <ScrollView className='flex-1' showsVerticalScrollIndicator={false} contentContainerClassName='gap-4'>
         <ShipmentWatDetails />
         <AllPointTimeLine />
