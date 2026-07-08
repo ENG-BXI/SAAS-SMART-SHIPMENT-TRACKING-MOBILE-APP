@@ -3,14 +3,22 @@ import React from 'react';
 import {Pressable, View} from 'react-native';
 import {ShipmentCardProps} from '../type';
 import {router} from 'expo-router';
+import {formattedDate} from '@/lib/utils';
 
-function ShipmentCard({shipmentNumber, routeName, numberOfPoint, startTime, endTime, fromCity, toCity}: ShipmentCardProps) {
+function ShipmentCard({shipmentNumber, endDate, isCompleted, isPaused, currentPoint, id, launchDate, way}: ShipmentCardProps) {
+  const sortedWay =
+    way?.points.sort((a, b) => {
+      return a.order - b.order;
+    }) ?? [];
+  const fromCity = sortedWay[0];
+  const toCity = sortedWay[sortedWay.length - 1];
+
   return (
     <View className='bg-gray-200 p-3 rounded-3xl overflow-hidden shadow-md'>
       {/* Header */}
       <View className='bg-black justify-around items-start h-24 px-4 py-3 rounded-2xl'>
         <View className='bg-orange-200 px-3 py-1 rounded-full'>
-          <Text className='text-orange-600 text-xs font-semibold'>{routeName}</Text>
+          <Text className='text-orange-600 text-xs font-semibold'>{way?.name}</Text>
         </View>
         <Text className='text-white text-xl font-bold'>Shipment #{shipmentNumber}</Text>
       </View>
@@ -19,15 +27,15 @@ function ShipmentCard({shipmentNumber, routeName, numberOfPoint, startTime, endT
       <View className='px-4 py-4'>
         {/* Time Row */}
         <View className='flex-row justify-between items-center'>
-          <Text className='text-black font-semibold'>{startTime}</Text>
-          <Text className='text-black font-semibold'>{endTime}</Text>
+          <Text className='text-black font-semibold'>{formattedDate(launchDate ?? '')}</Text>
+          <Text className='text-black font-semibold'>{endDate ? formattedDate(endDate) : '-'}</Text>
         </View>
 
         {/* Route */}
         <View className='flex-row items-center justify-between mt-3'>
           {/* From */}
           <View className='items-start'>
-            <Text className='text-gray-500 font-bold'>{fromCity}</Text>
+            <Text className='text-gray-500 font-bold'>{fromCity.name}</Text>
           </View>
 
           {/* Line */}
@@ -38,15 +46,21 @@ function ShipmentCard({shipmentNumber, routeName, numberOfPoint, startTime, endT
 
           {/* To */}
           <View className='items-end'>
-            <Text className='text-gray-500 font-bold'>{toCity}</Text>
+            <Text className='text-gray-500 font-bold'>{toCity.name}</Text>
           </View>
         </View>
         {/* Footer */}
         <View className='flex-row justify-between items-center mt-4'>
-          <Text className='text-gray-600 font-bold text-lg'>{numberOfPoint} Point</Text>
+          <Text className='text-gray-600 font-bold text-lg'>{way?.points.length} Point</Text>
           <Pressable
             onPress={() => {
-              router.push({pathname: `/shipments/[id]`, params: {id: shipmentNumber}});
+              router.push({
+                pathname: `/shipments/[id]`,
+                params: {
+                  id,
+                  data: JSON.stringify({way, currentPoint: currentPoint?.name, isCompleted, isPaused})
+                }
+              });
             }}
           >
             <Text className='text-gray-600 font-bold text-lg'>Show Details</Text>
