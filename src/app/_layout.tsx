@@ -18,7 +18,7 @@ export default function RootLayout() {
     <SafeAreaView className='flex-1 container'>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider value={MyTheme}>
-          <Stack screenOptions={{headerShown: false}} />
+          <Stack screenOptions={{headerShown: false,animation:'slide_from_right'}} />
           <PortalHost />
         </ThemeProvider>
       </QueryClientProvider>

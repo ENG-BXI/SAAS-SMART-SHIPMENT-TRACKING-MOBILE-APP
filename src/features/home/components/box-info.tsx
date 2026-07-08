@@ -9,7 +9,7 @@ interface BoxInfoProps {
 }
 function BoxInfo({data, icon, name: text}: BoxInfoProps) {
   return (
-    <View className='flex-1 min-w-20'>
+    <View className='flex-1 min-w-15'>
       <View className='bg-[#F5FBF5] border border-green-200 py-4 justify-center items-center rounded-2xl mb-1'>{icon}</View>
       <Text className='text-center font-bold mt-1 text-sm text-nowrap'>{text}</Text>
       <Text className='text-center font-bold'>{data}</Text>
