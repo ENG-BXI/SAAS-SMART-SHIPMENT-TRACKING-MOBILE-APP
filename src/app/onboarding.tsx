@@ -2,6 +2,7 @@ import React, {useRef, useState} from 'react';
 import {View, Text, FlatList, Dimensions, Pressable} from 'react-native';
 import {Image} from 'expo-image';
 import {router} from 'expo-router';
+import * as SecureStore from 'expo-secure-store';
 
 const {width, height} = Dimensions.get('window');
 
@@ -25,7 +26,7 @@ const DATA = [
     image: require('@/assets/images/onboard3.png')
   }
 ];
-
+export const ONBOARDING_KEY = 'onBoard';
 export default function Onboarding() {
   const flatListRef = useRef<FlatList>(null);
   const [index, setIndex] = useState(0);
@@ -47,6 +48,7 @@ export default function Onboarding() {
     setIndex(lastIndex);
   };
   const goToLogin = () => {
+    SecureStore.setItem(ONBOARDING_KEY, 'true');
     router.replace('/login');
   };
   return (
