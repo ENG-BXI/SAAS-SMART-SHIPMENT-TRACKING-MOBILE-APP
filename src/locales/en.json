@@ -1,0 +1,178 @@
+{
+    "auth": {
+        "login": {
+            "title": "Login",
+            "subtitle": "Enter your email and password to log in.",
+            "fields": {
+                "email": "Email",
+                "password": "Password"
+            },
+            "button": {
+                "continue": "Continue"
+            },
+            "sections": {
+                "credentials": {
+                    "title": "Credentials",
+                    "description": "Use your registered email and password."
+                }
+            },
+            "validation": {
+                "emailRequired": "Email is required.",
+                "emailInvalid": "Enter a valid email address.",
+                "emailMin": "Email must be greater than 3 letters.",
+                "passwordRequired": "Password is required.",
+                "passwordMin": "Password must be at least 8 characters.",
+                "passwordMax": "Password must be less than 100 characters."
+            },
+            "errors": {
+                "unexpected": "An unexpected error occurred."
+            }
+        }
+    },
+    "onboarding": {
+        "headerTitle": "S3 Tracking System",
+        "skip": "Skip",
+        "pages": [
+            {
+                "title": "Goods delivery is now easier",
+                "description": "Now, managing goods delivery has become simpler than ever.",
+                "image": "onboard1"
+            },
+            {
+                "title": "Package tracking is safer",
+                "description": "Tracking your package ensures a safer delivery experience.",
+                "image": "onboard2"
+            },
+            {
+                "title": "Use points for shipping deals",
+                "description": "Consider utilizing points to unlock exclusive shipping deals.",
+                "image": "onboard3"
+            }
+        ],
+        "button": {
+            "next": "Next",
+            "start": "Start"
+        },
+        "footer": {
+            "agreement": "By Login, you agree to our Terms of service and Terms and Privacy and policy."
+        }
+    },
+    "home": {
+        "error": {
+            "fetchShipment": "We couldn't fetch your shipment information."
+        },
+        "header": {
+            "greeting": "Good Morning, {{name}}",
+            "companySuffix": "Company"
+        },
+        "summary": {
+            "currentPoint": "Current point",
+            "wayName": "Way Name",
+            "detailsTitle": "Shipment Details",
+            "shipmentNumber": "Shipment #{{shipmentNumber}}",
+            "status": {
+                "complete": "COMPLETE",
+                "pause": "PAUSE",
+                "current": "CURRENT"
+            },
+            "description": {
+                "complete": "Shipment has been completed",
+                "pause": "Ready to Start",
+                "current": "Shipment is currently in progress"
+            },
+            "button": {
+                "movement": "Movement"
+            }
+        },
+        "boxes": {
+            "totalPoint": "Total Point",
+            "completed": "Completed",
+            "remainder": "Remainder",
+            "progress": "Progress"
+        }
+    },
+    "shipments": {
+        "title": "Shipments",
+        "currentShipment": "Current Shipment",
+        "finishedShipment": "Finished Shipment",
+        "searchPlaceholder": "Search Shipment",
+        "card": {
+            "shipmentNumber": "Shipment #{{shipmentNumber}}",
+            "showDetails": "Show Details",
+            "points": "{{count}} Point"
+        },
+        "status": {
+            "complete": "COMPLETE",
+            "pause": "PAUSE",
+            "active": "ACTIVE"
+        },
+        "error": {
+            "fetchShipments": "We couldn't fetch your shipments."
+        }
+    },
+    "shipmentDetails": {
+        "error": {
+            "fetchDetails": "We couldn't fetch your shipment details."
+        },
+        "header": {
+            "title": "Shipment #{{shipmentNumber}}"
+        },
+        "button": {
+            "finished": "Finished",
+            "movement": "Movement"
+        },
+        "details": {
+            "launchDate": "Launch Date",
+            "currentPoint": "Current Point",
+            "points": "Points",
+            "pointCount": "{{count}} Point",
+            "status": "Status",
+            "arrival": "Arrival"
+        },
+        "status": {
+            "complete": "COMPLETE",
+            "pause": "PAUSE",
+            "current": "CURRENT"
+        },
+        "timeline": {
+            "title": "All Point And Time Line",
+            "currentPoint": "Current Point",
+            "completedPoint": "Completed Point",
+            "nextPoint": "Next Point",
+            "upcomingPoint": "Upcoming Point"
+        },
+        "progress": {
+            "title": "Progress",
+            "stopsComplete": "Stops Complete",
+            "remainderPoint": "Reminder Point"
+        },
+        "summary": {
+            "numberOfClient": "Number Of Client",
+            "numberOfItems": "Number Of Items",
+            "clientLabel": "Client",
+            "itemsLabel": "Item",
+            "nextPoint": "Next Point"
+        },
+        "loading": {
+            "title": "Shipment"
+        }
+    },
+    "settings": {
+        "title": "Settings",
+        "description": "Control your app experience, privacy, and notifications.",
+        "preferences": "Preferences",
+        "support": "Support",
+        "darkMode": "Dark Mode",
+        "language": "Language",
+        "help": "Help",
+        "about": "About",
+        "theme": {
+            "light": "Light",
+            "dark": "Dark"
+        },
+        "languageOptions": {
+            "en": "English",
+            "ar": "Arabic"
+        }
+    }
+}

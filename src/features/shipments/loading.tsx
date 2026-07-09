@@ -4,9 +4,9 @@ import {Skeleton} from '@/components/ui/skeleton';
 
 const ShipmentSkeletonCard = () => {
   return (
-    <View className='bg-gray-200 p-3 rounded-3xl'>
+    <View className='bg-gray-200 dark:bg-slate-900 p-3 rounded-3xl'>
       {/* Header */}
-      <View className='bg-gray-300 h-24 px-4 py-3 rounded-2xl justify-between'>
+      <View className='bg-gray-300 dark:bg-slate-800 h-24 px-4 py-3 rounded-2xl justify-between'>
         <Skeleton className='h-6 w-24 rounded-full' />
 
         <Skeleton className='h-6 w-44' />
@@ -44,7 +44,7 @@ const ShipmentSkeletonCard = () => {
 
 const ShipmentsSkeleton = () => {
   return (
-    <View className='flex-1 mt-10'>
+    <View className='flex-1 mt-10 bg-white dark:bg-slate-950'>
       {/* Header */}
       <View className='px-4'>
         <Skeleton className='h-8 w-36 mt-4' />
@@ -55,7 +55,7 @@ const ShipmentsSkeleton = () => {
         <Skeleton className='h-12 w-full rounded-xl' />
       </View>
 
-      <ScrollView showsVerticalScrollIndicator={false} className='px-4'>
+      <ScrollView showsVerticalScrollIndicator={false} className='px-4 bg-white dark:bg-slate-950'>
         {/* Current title */}
         <View className='flex-row justify-between mt-6 mb-3'>
           <Skeleton className='h-7 w-48' />

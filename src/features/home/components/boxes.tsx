@@ -2,6 +2,7 @@ import React, {memo} from 'react';
 import {View} from 'react-native';
 import BoxInfo from './box-info';
 import {Feather, MaterialCommunityIcons} from '@expo/vector-icons';
+import {useTranslation} from 'react-i18next';
 interface BoxesProps {
   pointLength?: number;
   completedLength?: number;
@@ -9,25 +10,26 @@ interface BoxesProps {
   progress?: number;
 }
 const Boxes = ({pointLength, completedLength, progress, remainderLength}: BoxesProps) => {
+  const {t} = useTranslation();
   const boxesData = [
     {
       icon: <Feather name='box' size={20} color='green' />,
-      name: 'Total Point',
+      name: t('home.boxes.totalPoint'),
       data: `${pointLength}`
     },
     {
       icon: <Feather name='check-circle' size={20} color='green' />,
-      name: 'Completed',
+      name: t('home.boxes.completed'),
       data: `${completedLength}`
     },
     {
       icon: <MaterialCommunityIcons name='truck-delivery-outline' size={20} color='green' />,
-      name: 'Remainder',
+      name: t('home.boxes.remainder'),
       data: `${remainderLength}`
     },
     {
       icon: <MaterialCommunityIcons name='progress-star' size={20} color='green' />,
-      name: 'Progress',
+      name: t('home.boxes.progress'),
       data: `${progress}%`
     }
   ];

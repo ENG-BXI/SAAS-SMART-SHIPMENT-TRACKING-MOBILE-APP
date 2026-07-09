@@ -1,20 +1,29 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import {Slot} from 'expo-router';
 import {Tabs} from 'expo-router';
+import {useColorScheme} from 'nativewind';
 import React from 'react';
-import {View} from 'react-native';
 
 const AppLayout = () => {
+  const nativeScheme = useColorScheme();
+  const isDark = nativeScheme.colorScheme === 'dark';
+
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        sceneStyle: {paddingHorizontal: 16},
-        tabBarActiveTintColor: 'green',
+        sceneStyle: {
+          paddingHorizontal: 16,
+          backgroundColor: isDark ? '#020617' : '#f8fafc'
+        },
+        tabBarActiveTintColor: isDark ? '#a3e635' : '#1B8354',
+        tabBarInactiveTintColor: isDark ? '#94a3b8' : '#64748b',
         tabBarStyle: {
           height: 55,
           paddingBottom: 6,
-          paddingTop: 6
+          paddingTop: 6,
+          backgroundColor: isDark ? '#020617' : '#ffffff',
+          borderTopWidth: 0,
+          elevation: 0
         }
       }}
     >

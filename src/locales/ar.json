@@ -1,0 +1,178 @@
+{
+    "auth": {
+        "login": {
+            "title": "تسجيل الدخول",
+            "subtitle": "أدخل بريدك الإلكتروني وكلمة المرور لتسجيل الدخول.",
+            "fields": {
+                "email": "البريد الإلكتروني",
+                "password": "كلمة المرور"
+            },
+            "button": {
+                "continue": "متابعة"
+            },
+            "sections": {
+                "credentials": {
+                    "title": "بيانات الاعتماد",
+                    "description": "استخدم البريد الإلكتروني وكلمة المرور المسجلين."
+                }
+            },
+            "validation": {
+                "emailRequired": "البريد الإلكتروني مطلوب.",
+                "emailInvalid": "أدخل عنوان بريد إلكتروني صالح.",
+                "emailMin": "يجب أن يكون البريد الإلكتروني أكثر من 3 أحرف.",
+                "passwordRequired": "كلمة المرور مطلوبة.",
+                "passwordMin": "يجب أن تكون كلمة المرور 8 أحرف على الأقل.",
+                "passwordMax": "يجب أن تكون كلمة المرور أقل من 100 حرف."
+            },
+            "errors": {
+                "unexpected": "حدث خطأ غير متوقع."
+            }
+        }
+    },
+    "onboarding": {
+        "headerTitle": "نظام تتبع S3",
+        "skip": "تخطي",
+        "pages": [
+            {
+                "title": "توصيل البضائع أصبح أسهل الآن",
+                "description": "الآن، إدارة توصيل البضائع أصبحت أبسط من أي وقت مضى.",
+                "image": "onboard1"
+            },
+            {
+                "title": "تتبع الطرود أصبح أكثر أماناً",
+                "description": "يوفر تتبع الطرد تجربة تسليم أكثر أماناً.",
+                "image": "onboard2"
+            },
+            {
+                "title": "استخدم النقاط لصفقات الشحن",
+                "description": "فكر في استخدام النقاط لفتح صفقات شحن حصرية.",
+                "image": "onboard3"
+            }
+        ],
+        "button": {
+            "next": "التالي",
+            "start": "ابدأ"
+        },
+        "footer": {
+            "agreement": "بتسجيل الدخول، فإنك توافق على شروط الخدمة وسياسة الخصوصية."
+        }
+    },
+    "home": {
+        "error": {
+            "fetchShipment": "تعذر جلب معلومات الشحنة."
+        },
+        "header": {
+            "greeting": "صباح الخير، {{name}}",
+            "companySuffix": "شركة"
+        },
+        "summary": {
+            "currentPoint": "النقطة الحالية",
+            "wayName": "اسم المسار",
+            "detailsTitle": "تفاصيل الشحنة",
+            "shipmentNumber": "الشحنة #{{shipmentNumber}}",
+            "status": {
+                "complete": "مكتملة",
+                "pause": "موقوفة",
+                "current": "جارية"
+            },
+            "description": {
+                "complete": "تمت الشحنة بنجاح",
+                "pause": "جاهزة للبدء",
+                "current": "الشحنة قيد التنفيذ حالياً"
+            },
+            "button": {
+                "movement": "حركة"
+            }
+        },
+        "boxes": {
+            "totalPoint": "إجمالي النقاط",
+            "completed": "المكتملة",
+            "remainder": "المتبقية",
+            "progress": "التقدم"
+        }
+    },
+    "shipments": {
+        "title": "الشحنات",
+        "currentShipment": "الشحنة الحالية",
+        "finishedShipment": "الشحنات المنتهية",
+        "searchPlaceholder": "ابحث عن شحنة",
+        "card": {
+            "shipmentNumber": "الشحنة #{{shipmentNumber}}",
+            "showDetails": "عرض التفاصيل",
+            "points": "{{count}} نقطة"
+        },
+        "status": {
+            "complete": "مكتملة",
+            "pause": "موقوفة",
+            "active": "نشطة"
+        },
+        "error": {
+            "fetchShipments": "تعذر جلب الشحنات."
+        }
+    },
+    "shipmentDetails": {
+        "error": {
+            "fetchDetails": "تعذر جلب تفاصيل الشحنة."
+        },
+        "header": {
+            "title": "الشحنة #{{shipmentNumber}}"
+        },
+        "button": {
+            "finished": "منتهية",
+            "movement": "تحرك"
+        },
+        "details": {
+            "launchDate": "تاريخ الإطلاق",
+            "currentPoint": "النقطة الحالية",
+            "points": "النقاط",
+            "pointCount": "{{count}} نقطة",
+            "status": "الحالة",
+            "arrival": "الوصول"
+        },
+        "status": {
+            "complete": "مكتملة",
+            "pause": "موقوفة",
+            "current": "جارية"
+        },
+        "timeline": {
+            "title": "الجدول الزمني لجميع النقاط",
+            "currentPoint": "النقطة الحالية",
+            "completedPoint": "النقطة المكتملة",
+            "nextPoint": "النقطة التالية",
+            "upcomingPoint": "النقطة القادمة"
+        },
+        "progress": {
+            "title": "التقدم",
+            "stopsComplete": "المحطات المكتملة",
+            "remainderPoint": "النقاط المتبقية"
+        },
+        "summary": {
+            "numberOfClient": "عدد العملاء",
+            "numberOfItems": "عدد العناصر",
+            "clientLabel": "عميل",
+            "itemsLabel": "عنصر",
+            "nextPoint": "النقطة التالية"
+        },
+        "loading": {
+            "title": "الشحنة"
+        }
+    },
+    "settings": {
+        "title": "الإعدادات",
+        "description": "تحكم بتجربة التطبيق والخصوصية والإشعارات.",
+        "preferences": "التفضيلات",
+        "support": "الدعم",
+        "darkMode": "الوضع الداكن",
+        "language": "اللغة",
+        "help": "مساعدة",
+        "about": "حول",
+        "theme": {
+            "light": "فاتح",
+            "dark": "داكن"
+        },
+        "languageOptions": {
+            "en": "الإنجليزية",
+            "ar": "العربية"
+        }
+    }
+}

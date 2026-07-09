@@ -6,6 +6,7 @@ import React, {memo} from 'react';
 import {FlatList, View} from 'react-native';
 import {Text} from './ui/text';
 import usePoint from '@/features/home/hook/use-point';
+import {useTranslation} from 'react-i18next';
 
 interface PointTimeLineProps {
   currentPointName?: string;
@@ -19,31 +20,32 @@ interface PointTimeLineProps {
   }[];
 }
 function PointTimeLine({timelineData, currentPointName}: PointTimeLineProps) {
+  const {t} = useTranslation();
   const {currentIndex} = usePoint({points: timelineData});
   return (
     <FlatList
-      className='h-60 bg-white p-3 rounded-xl'
+      className='h-60 bg-white dark:bg-slate-900 p-3 rounded-xl'
       data={timelineData}
       nestedScrollEnabled
       renderItem={({item, index}) => {
         const point =
           index === currentIndex
             ? {
-                name: 'Current Point',
-                icon: <MaterialIcons name='my-location' size={24} color='green' />
+                name: t('shipmentDetails.timeline.currentPoint'),
+                icon: <MaterialIcons name='my-location' size={24} color='#1B8354' />
               }
             : index < currentIndex
               ? {
-                  name: 'Completed Point',
-                  icon: <FontAwesome name='check-circle-o' size={24} color='green' />
+                  name: t('shipmentDetails.timeline.completedPoint'),
+                  icon: <FontAwesome name='check-circle-o' size={24} color='#1B8354' />
                 }
               : index === currentIndex + 1
                 ? {
-                    name: 'Next Point',
-                    icon: <Ionicons name='location' size={24} color='green' />
+                    name: t('shipmentDetails.timeline.nextPoint'),
+                    icon: <Ionicons name='location' size={24} color='#1B8354' />
                   }
                 : {
-                    name: 'Upcoming Point',
+                    name: t('shipmentDetails.timeline.upcomingPoint'),
                     icon: <Ionicons name='location-outline' size={24} color='gray' />
                   };
         return (
@@ -51,13 +53,13 @@ function PointTimeLine({timelineData, currentPointName}: PointTimeLineProps) {
             {/* Timeline */}
             <View className='items-center mr-4'>
               {point.icon}
-              <View className='border-l border-dashed flex-1 bg-gray-300' />
+              <View className='border-l border-dashed flex-1 bg-gray-300 dark:bg-slate-700' />
             </View>
 
             {/* Content */}
             <View className='flex-1'>
-              <Text className='text-gray-500'>{point.name}</Text>
-              <Text className='font-bold text-lg'>{item.name}</Text>
+              <Text className='text-gray-500 dark:text-slate-300'>{point.name}</Text>
+              <Text className='font-bold text-lg text-black dark:text-white'>{item.name}</Text>
             </View>
           </View>
         );
