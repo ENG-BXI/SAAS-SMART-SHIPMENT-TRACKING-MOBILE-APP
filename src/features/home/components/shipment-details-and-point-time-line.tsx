@@ -6,6 +6,7 @@ import {Text} from '@/components/ui/text';
 import {Button} from '@/components/ui/button';
 import {timelineData} from '../type';
 import PointTimeLine from '@/components/point-time-line';
+import {useTranslation} from 'react-i18next';
 interface ShipmentDetailsAndPointTimeLineProps {
   shipmentNumber?: string;
   currentPointName?: string;
@@ -21,23 +22,30 @@ interface ShipmentDetailsAndPointTimeLineProps {
   }[];
 }
 function ShipmentDetailsAndPointTimeLine({shipmentNumber, currentPointName, isCompleted, isPaused, points}: ShipmentDetailsAndPointTimeLineProps) {
-  const status = isCompleted ? 'COMPLETE' : isPaused ? 'PAUSE' : 'CURRENT';
-  const des = isCompleted ? 'Shipment has been completed' : isPaused ? 'Ready to Start' : 'Shipment is currently in progress';
+  const {t} = useTranslation();
+  const status = isCompleted ? t('home.summary.status.complete') : isPaused ? t('home.summary.status.pause') : t('home.summary.status.current');
+  const des = isCompleted ? t('home.summary.description.complete') : isPaused ? t('home.summary.description.pause') : t('home.summary.description.current');
+  const isFinish = isCompleted;
   return (
     <Card>
-      <CardContent className='px-2 pb-2 bg-[#F2F5F8]'>
+      <CardContent className='px-2 pb-2 bg-[#F2F5F8] dark:bg-slate-950'>
         <View className='px-3 flex gap-2 justify-between mb-5'>
           <View>
-            <Text className='font-bold text-xl'>Shipment #{shipmentNumber}</Text>
-            <Text>
+            <Text className='font-bold text-xl text-black dark:text-white'>{t('home.summary.shipmentNumber', {shipmentNumber})}</Text>
+            <Text className='text-slate-600 dark:text-slate-300'>
               {status} • {des}
             </Text>
           </View>
           {/* Button */}
-          <Button variant='primary' size={'lg'} className='flex-row items-center gap-1'>
-            <EvilIcons name='location' size={24} color='white' />
-            <Text className='text-white'>Movement</Text>
-          </Button>
+          {isFinish ? (
+            <Button variant={'outline'} className='border-gray-400 rounded-xl ' size={'lg'}>
+              <Text className='text-black dark:text-white'>{t('shipmentDetails.button.finished')}</Text>
+            </Button>
+          ) : (
+            <Button variant={'primary'} size={'lg'} className=''>
+              <Text className='text-white'>{t('shipmentDetails.button.movement')}</Text>
+            </Button>
+          )}
         </View>
         <PointTimeLine currentPointName={currentPointName} timelineData={points} />
       </CardContent>

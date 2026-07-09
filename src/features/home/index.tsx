@@ -8,18 +8,20 @@ import {useStatistics} from './api';
 import usePoint from './hook/use-point';
 import ShipmentHomeSkeleton from './loading';
 import ErrorState from '@/components/error-state';
+import {useTranslation} from 'react-i18next';
 
 const ShipmentHome = () => {
+  const {t} = useTranslation();
   const {data, isLoading, isError, error, refetch} = useStatistics();
   if (isLoading) return <ShipmentHomeSkeleton />;
   if (isError) {
-    return <ErrorState message="We couldn't fetch your shipment information." technicalError={error?.message} onRetry={refetch} />;
+    return <ErrorState message={t('home.error.fetchShipment')} technicalError={error?.message} onRetry={refetch} />;
   }
 
   const statstics = data?.data.data;
-  const {completedLength, pointLength, progress, currentIndex, remainderLength} = usePoint({currentPointName: statstics?.currentPoint.name, points: statstics?.way.points});
+  const {completedLength, pointLength, progress, remainderLength} = usePoint({currentPointName: statstics?.currentPoint.name, points: statstics?.way.points});
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView className='bg-white dark:bg-slate-950' showsVerticalScrollIndicator={false}>
       <HeaderAndBox name={statstics?.userName} companyName={statstics?.company.name} />
       <SummaryHeaderBox id={statstics?.id!} currentPoint={statstics?.currentPoint.name} shipmentNumber={statstics?.shipmentNumber} way={statstics?.way} isCompleted={statstics?.isCompleted} isPaused={statstics?.isPaused} />
       <ShipmentDetailsAndPointTimeLine shipmentNumber={statstics?.shipmentNumber} currentPointName={statstics?.currentPoint.name} isCompleted={statstics?.isCompleted} isPaused={statstics?.isPaused} points={statstics?.way.points} />

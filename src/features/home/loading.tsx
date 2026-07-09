@@ -4,7 +4,7 @@ import {Skeleton} from '@/components/ui/skeleton';
 
 const ShipmentHomeSkeleton = () => {
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView className='bg-white dark:bg-slate-950' showsVerticalScrollIndicator={false}>
       {/* Header */}
       <View className='flex-row items-center justify-between mt-20'>
         <View className='gap-3'>
@@ -14,7 +14,7 @@ const ShipmentHomeSkeleton = () => {
       </View>
 
       {/* Summary */}
-      <View className='bg-white rounded-xl px-4 py-5 flex-row justify-between items-center'>
+      <View className='bg-white dark:bg-slate-900 rounded-xl px-4 py-5 flex-row justify-between items-center'>
         <View className='flex-row items-center gap-3'>
           <Skeleton className='h-10 w-10 rounded-full' />
 
@@ -37,7 +37,7 @@ const ShipmentHomeSkeleton = () => {
       </View>
 
       {/* Details Header */}
-      <View className='bg-green-100 rounded-2xl px-4 py-4 mt-4 flex-row items-center gap-3'>
+      <View className='bg-green-100 dark:bg-slate-800 rounded-2xl px-4 py-4 mt-4 flex-row items-center gap-3'>
         <Skeleton className='h-6 w-6 rounded-full' />
 
         <Skeleton className='h-5 flex-1' />
@@ -46,7 +46,7 @@ const ShipmentHomeSkeleton = () => {
       </View>
 
       {/* Shipment Card */}
-      <View className='bg-gray-100 rounded-xl p-4 mt-4'>
+      <View className='bg-gray-100 dark:bg-slate-900 rounded-xl p-4 mt-4'>
         <Skeleton className='h-7 w-48' />
 
         <Skeleton className='h-5 w-64 mt-3' />

@@ -4,6 +4,7 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import {router} from 'expo-router';
 import React, {memo} from 'react';
 import {Pressable, View} from 'react-native';
+import {useTranslation} from 'react-i18next';
 interface SummaryHeaderBoxProps {
   id: string;
   currentPoint?: string;
@@ -23,22 +24,23 @@ interface SummaryHeaderBoxProps {
   isPaused?: boolean;
 }
 function SummaryHeaderBox({id, isCompleted, isPaused, currentPoint, way, shipmentNumber}: SummaryHeaderBoxProps) {
+  const {t} = useTranslation();
   return (
     <View>
-      <View className='bg-white flex-row justify-around rounded-xl px-4 py-2 relative -top-3 z-10'>
+      <View className='bg-white dark:bg-slate-900 flex-row justify-around rounded-xl px-4 py-2 relative -top-3 z-10 shadow-sm shadow-black/5 dark:shadow-black/20'>
         <View className='flex-row items-center gap-3'>
-          <MaterialIcons name='my-location' size={35} />
+          <MaterialIcons name='my-location' size={35} color='#1B8354' />
           <View>
-            <Text>Current point</Text>
-            <Text className='font-bold text-xl'>{currentPoint}</Text>
+            <Text className='text-slate-600 dark:text-slate-300'>{t('home.summary.currentPoint')}</Text>
+            <Text className='font-bold text-xl text-black dark:text-white'>{currentPoint}</Text>
           </View>
         </View>
-        <View className='w-0.5 bg-gray-100 h-3/4 my-auto' />
+        <View className='w-0.5 bg-gray-100 dark:bg-slate-700 h-3/4 my-auto' />
         <View className='flex-row items-center gap-3'>
-          <FontAwesome6 name='route' size={30} color='black' />
+          <FontAwesome6 name='route' size={30} color='#1B8354' />
           <View>
-            <Text>Way Name</Text>
-            <Text className='font-bold text-xl'>{way?.name}</Text>
+            <Text className='text-slate-600 dark:text-slate-300'>{t('home.summary.wayName')}</Text>
+            <Text className='font-bold text-xl text-black dark:text-white'>{way?.name}</Text>
           </View>
         </View>
       </View>
@@ -46,10 +48,10 @@ function SummaryHeaderBox({id, isCompleted, isPaused, currentPoint, way, shipmen
         style={{
           elevation: 10
         }}
-        className='flex-row gap-2 items-center bg-[#DAF1DB] w-full px-4 py-2 rounded-2xl relative -top-8 pt-7'
+        className='flex-row gap-2 items-center bg-[#DAF1DB] dark:bg-slate-800 w-full px-4 py-2 rounded-2xl relative -top-8 pt-7'
       >
         <FontAwesome6 name='award' size={20} color='black' />
-        <Text className='flex-1'>Shipment Details</Text>
+        <Text className='flex-1 text-black dark:text-white'>{t('home.summary.detailsTitle')}</Text>
         <Pressable
           onPress={() => {
             if (shipmentNumber)

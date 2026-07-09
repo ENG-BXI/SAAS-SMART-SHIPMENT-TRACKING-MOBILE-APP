@@ -5,14 +5,8 @@ import { View } from 'react-native';
 
 function Card({ className, ...props }: React.ComponentProps<typeof View> & React.RefAttributes<View>) {
   return (
-    <TextClassContext.Provider value="text-card-foreground">
-      <View
-        className={cn(
-          'bg-card flex flex-col gap-6 rounded-xl border border-gray-200 shadow-sm shadow-black/5',
-          className
-        )}
-        {...props}
-      />
+    <TextClassContext.Provider value='text-card-foreground'>
+      <View className={cn('bg-card flex flex-col gap-6 rounded-xl border border-gray-200 dark:border-slate-700 shadow-sm shadow-black/5', className)} {...props} />
     </TextClassContext.Provider>
   );
 }

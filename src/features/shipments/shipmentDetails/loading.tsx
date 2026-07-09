@@ -2,15 +2,17 @@ import React from 'react';
 import {ScrollView, View} from 'react-native';
 import {Skeleton} from '@/components/ui/skeleton';
 import CustomHeader from '@/components/custom-header';
+import {useTranslation} from 'react-i18next';
 
 const ShipmentDetailsSkeleton = () => {
+  const {t} = useTranslation();
   return (
-    <View className='flex-1 px-4'>
-      <CustomHeader title='Shipment' hasBack description='' />
+    <View className='flex-1 px-4 bg-white dark:bg-slate-950'>
+      <CustomHeader title={t('shipmentDetails.loading.title')} hasBack description='' />
 
-      <ScrollView showsVerticalScrollIndicator={false} contentContainerClassName='gap-4 pb-10'>
+      <ScrollView showsVerticalScrollIndicator={false} contentContainerClassName='gap-4 pb-10' className='bg-white dark:bg-slate-950'>
         {/* Shipment Info */}
-        <View className='bg-gray-200 rounded-3xl p-4'>
+        <View className='bg-gray-200 dark:bg-slate-950 rounded-3xl p-4'>
           <View className='flex-row justify-between items-center'>
             <View className='gap-2'>
               <Skeleton className='h-7 w-20' />
@@ -42,10 +44,10 @@ const ShipmentDetailsSkeleton = () => {
         </View>
 
         {/* Timeline */}
-        <View className='bg-gray-200 rounded-3xl p-4'>
+        <View className='bg-gray-200 dark:bg-slate-900 rounded-3xl p-4'>
           <Skeleton className='h-6 w-44 mb-4' />
 
-          <View className='bg-white rounded-xl p-4'>
+          <View className='bg-white dark:bg-slate-950 rounded-xl p-4'>
             {Array.from({length: 5}).map((_, i) => (
               <View key={i} className='flex-row gap-4 mb-6'>
                 <Skeleton className='h-8 w-8 rounded-full' />
@@ -60,7 +62,7 @@ const ShipmentDetailsSkeleton = () => {
         </View>
 
         {/* Progress */}
-        <View className='bg-gray-200 rounded-3xl p-4'>
+        <View className='bg-gray-200 dark:bg-slate-900 rounded-3xl p-4'>
           <View className='flex-row justify-between items-center'>
             <View className='flex-1 mr-4'>
               <Skeleton className='h-5 w-28 mb-4' />
@@ -76,7 +78,7 @@ const ShipmentDetailsSkeleton = () => {
         </View>
 
         {/* Summary */}
-        <View className='bg-gray-200 rounded-3xl p-4'>
+        <View className='bg-gray-200 dark:bg-slate-900 rounded-3xl p-4'>
           <View className='flex-row justify-between gap-4'>
             {Array.from({length: 3}).map((_, i) => (
               <View key={i} className='flex-1'>

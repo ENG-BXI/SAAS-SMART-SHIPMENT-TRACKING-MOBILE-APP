@@ -21,7 +21,7 @@ function CustomInput<T extends FieldValues>({label, field, labelClassName, input
   return (
     <View className={cn('mb-3 relative', className)}>
       {label && <Label className={cn('font-semibold text-lg mb-1', labelClassName)}>{label}</Label>}
-      <Input value={field.value} onChangeText={field.onChange} className={cn('h-12 rounded-2xl border-gray-400 pr-11', inputClassName)} secureTextEntry={isPassword} {...props} />
+      <Input value={field.value} onChangeText={field.onChange} className={cn('h-12 rounded-2xl border-gray-400 pr-11 dark:text-white', inputClassName)} secureTextEntry={isPassword} {...props} />
       <View className='absolute top-11 right-4'>{subfixIcon}</View>
       {invalid && <Text className='ps-2 text-red-500 text-sm'>{error}</Text>}
     </View>
