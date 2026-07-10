@@ -9,8 +9,7 @@ import {useLanguage} from '@/hooks/useLanguage';
 
 function ShipmentCard({shipmentNumber, endDate, isCompleted, isPaused, currentPoint, id, launchDate, way}: ShipmentCardProps) {
   const {t} = useTranslation();
-  const {language} = useLanguage();
-  const isRtl = language === 'ar';
+  const {isRtl} = useLanguage();
 
   const sortedWay =
     way?.points.sort((a, b) => {
@@ -18,9 +17,8 @@ function ShipmentCard({shipmentNumber, endDate, isCompleted, isPaused, currentPo
     }) ?? [];
   const fromCity = sortedWay[0];
   const toCity = sortedWay[sortedWay.length - 1];
-
   return (
-    <View style={{writingDirection: isRtl ? 'rtl' : 'ltr'}} className='bg-gray-200 dark:bg-slate-900 p-3 rounded-3xl overflow-hidden shadow-md shadow-black/10 dark:shadow-black/30'>
+    <View style={{direction: isRtl ? 'rtl' : 'ltr'}} className='bg-gray-200 dark:bg-slate-900 p-3 rounded-3xl overflow-hidden shadow-md shadow-black/10 dark:shadow-black/30'>
       {/* Header */}
       <View className='bg-black justify-around items-start h-24 px-4 py-3 rounded-2xl'>
         <View className='bg-orange-200 px-3 py-1 rounded-full'>

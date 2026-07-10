@@ -1,9 +1,10 @@
 import {View, Pressable, Switch} from 'react-native';
-import {Ionicons} from '@expo/vector-icons';
+import {Ionicons, MaterialIcons} from '@expo/vector-icons';
 import {Text} from '@/components/ui/text';
 import {useState} from 'react';
 import React from 'react';
 import {cn} from '@/lib/utils';
+import { useLanguage } from '@/hooks/useLanguage';
 
 interface Props {
   icon: keyof typeof Ionicons.glyphMap;
@@ -21,6 +22,7 @@ export function SettingRow({icon, color, title, value, type, switchValue, onTogg
   const [enabled, setEnabled] = useState(false);
   const isControlledSwitch = type === 'switch' && typeof switchValue === 'boolean' && typeof onToggle === 'function';
   const currentValue = isControlledSwitch ? switchValue : enabled;
+  const {isRtl} = useLanguage();
 
   const handleSwitchChange = (nextValue: boolean) => {
     if (isControlledSwitch) {
@@ -69,7 +71,7 @@ export function SettingRow({icon, color, title, value, type, switchValue, onTogg
       ) : (
         <View className='flex-row items-center'>
           {value && <Text className='text-[17px] text-[#8E8E93] dark:text-slate-400 mr-2'>{value}</Text>}
-          <Ionicons name='chevron-forward' size={18} color='#C7C7CC' />
+          <MaterialIcons name={isRtl ? 'keyboard-arrow-left' : 'keyboard-arrow-right'} size={24} />
         </View>
       )}
     </Pressable>

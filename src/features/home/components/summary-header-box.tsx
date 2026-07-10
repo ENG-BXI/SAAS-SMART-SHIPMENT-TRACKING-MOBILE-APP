@@ -5,6 +5,7 @@ import {router} from 'expo-router';
 import React, {memo} from 'react';
 import {Pressable, View} from 'react-native';
 import {useTranslation} from 'react-i18next';
+import {useLanguage} from '@/hooks/useLanguage';
 interface SummaryHeaderBoxProps {
   id: string;
   currentPoint?: string;
@@ -25,6 +26,7 @@ interface SummaryHeaderBoxProps {
 }
 function SummaryHeaderBox({id, isCompleted, isPaused, currentPoint, way, shipmentNumber}: SummaryHeaderBoxProps) {
   const {t} = useTranslation();
+  const {isRtl} = useLanguage();
   return (
     <View>
       <View className='bg-white dark:bg-slate-900 flex-row justify-around rounded-xl px-4 py-2 relative -top-3 z-10 shadow-sm shadow-black/5 dark:shadow-black/20'>
@@ -44,29 +46,30 @@ function SummaryHeaderBox({id, isCompleted, isPaused, currentPoint, way, shipmen
           </View>
         </View>
       </View>
-      <View
-        style={{
-          elevation: 10
+      <Pressable
+        onPress={() => {
+          if (shipmentNumber)
+            router.push({
+              pathname: '/shipments/[id]',
+              params: {
+                id,
+                data: JSON.stringify({way, currentPoint: currentPoint, isCompleted, isPaused})
+              }
+            });
         }}
-        className='flex-row gap-2 items-center bg-[#DAF1DB] dark:bg-slate-800 w-full px-4 py-2 rounded-2xl relative -top-8 pt-7'
       >
-        <FontAwesome6 name='award' size={20} color='black' />
-        <Text className='flex-1 text-black dark:text-white'>{t('home.summary.detailsTitle')}</Text>
-        <Pressable
-          onPress={() => {
-            if (shipmentNumber)
-              router.push({
-                pathname: '/shipments/[id]',
-                params: {
-                  id,
-                  data: JSON.stringify({way, currentPoint: currentPoint, isCompleted, isPaused})
-                }
-              });
+        <View
+          style={{
+            elevation: 10
           }}
+          className='flex-row gap-2 items-center bg-[#DAF1DB] dark:bg-slate-800 w-full px-4 py-2 rounded-2xl relative -top-8 pt-7'
         >
-          <MaterialIcons name='keyboard-arrow-right' size={24} />
-        </Pressable>
-      </View>
+          <FontAwesome6 name='award' size={20} color='black' />
+          <Text className='flex-1 text-black dark:text-white'>{t('home.summary.detailsTitle')}</Text>
+
+          <MaterialIcons name={isRtl ? 'keyboard-arrow-left' : 'keyboard-arrow-right'} size={24} />
+        </View>
+      </Pressable>
     </View>
   );
 }

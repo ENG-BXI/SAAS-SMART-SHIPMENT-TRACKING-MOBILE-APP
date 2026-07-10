@@ -1,4 +1,3 @@
-import {ITimeline} from '@/features/home/type';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
@@ -21,7 +20,7 @@ interface PointTimeLineProps {
 }
 function PointTimeLine({timelineData, currentPointName}: PointTimeLineProps) {
   const {t} = useTranslation();
-  const {currentIndex} = usePoint({points: timelineData});
+  const {currentIndex} = usePoint({currentPointName, points: timelineData});
   return (
     <FlatList
       className='h-60 bg-white dark:bg-slate-900 p-3 rounded-xl'

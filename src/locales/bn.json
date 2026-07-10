@@ -1,0 +1,200 @@
+{
+    "auth": {
+        "login": {
+            "title": "লগইন",
+            "subtitle": "লগইন করতে আপনার ইমেইল এবং পাসওয়ার্ড দিন।",
+            "fields": {
+                "email": "ইমেইল",
+                "password": "পাসওয়ার্ড"
+            },
+            "button": {
+                "continue": "চালিয়ে যান"
+            },
+            "sections": {
+                "credentials": {
+                    "title": "শনাক্তকরণ তথ্য",
+                    "description": "আপনার নিবন্ধিত ইমেইল এবং পাসওয়ার্ড ব্যবহার করুন।"
+                }
+            },
+            "validation": {
+                "emailRequired": "ইমেইল আবশ্যক।",
+                "emailInvalid": "একটি বৈধ ইমেইল ঠিকানা দিন।",
+                "emailMin": "ইমেইলটি ৩টি অক্ষরের বেশি হতে হবে।",
+                "passwordRequired": "পাসওয়ার্ড আবশ্যক।",
+                "passwordMin": "পাসওয়ার্ড কমপক্ষে ৮টি অক্ষরের হতে হবে।",
+                "passwordMax": "পাসওয়ার্ড ১০০টি অক্ষরের কম হতে হবে।"
+            },
+            "errors": {
+                "unexpected": "একটি অপ্রত্যাশিত ত্রুটি ঘটেছে।"
+            }
+        }
+    },
+    "onboarding": {
+        "headerTitle": "S3 ট্র্যাকিং সিস্টেম",
+        "skip": "এড়িয়ে যান",
+        "pages": [
+            {
+                "title": "পণ্য ডেলিভারি এখন আরও সহজ",
+                "description": "এখন, পণ্য ডেলিভারি পরিচালনা করা আগের চেয়ে অনেক সহজ হয়েছে।",
+                "image": "onboard1"
+            },
+            {
+                "title": "প্যাকেজ ট্র্যাকিং আরও নিরাপদ",
+                "description": "আপনার প্যাকেজ ট্র্যাক করা একটি নিরাপদ ডেলিভারি অভিজ্ঞতা নিশ্চিত করে।",
+                "image": "onboard2"
+            },
+            {
+                "title": "শিপিং ডিলের জন্য পয়েন্ট ব্যবহার করুন",
+                "description": "এক্সক্লুসিভ শিপিং ডিল আনলক করতে পয়েন্ট ব্যবহার করার কথা বিবেচনা করুন।",
+                "image": "onboard3"
+            }
+        ],
+        "button": {
+            "next": "পরবর্তী",
+            "start": "শুরু করুন"
+        },
+        "footer": {
+            "agreement": "লগইন করার মাধ্যমে, আপনি আমাদের পরিষেবার শর্তাবলী এবং গোপনীয়তা নীতিতে সম্মত হন।"
+        }
+    },
+    "shared": {
+        "pagination": {
+            "previous": "পূর্ববর্তী",
+            "next": "পরবর্তী",
+            "page": "পৃষ্ঠা {{currentPage}} / {{totalPages}}"
+        }
+    },
+    "home": {
+        "error": {
+            "fetchShipment": "আমরা আপনার শিপমেন্ট তথ্য আনতে পারিনি।"
+        },
+        "header": {
+            "greeting": "শুভ সকাল, {{name}}",
+            "companySuffix": "কোম্পানি"
+        },
+        "summary": {
+            "currentPoint": "বর্তমান পয়েন্ট",
+            "wayName": "রুটের নাম",
+            "detailsTitle": "শিপমেন্টের বিবরণ",
+            "shipmentNumber": "শিপমেন্ট #{{shipmentNumber}}",
+            "status": {
+                "complete": "সম্পূর্ণ",
+                "pause": "বিরতি",
+                "current": "বর্তমান"
+            },
+            "description": {
+                "complete": "শিপমেন্ট সম্পন্ন হয়েছে",
+                "pause": "শুরু করার জন্য প্রস্তুত",
+                "current": "শিপমেন্ট বর্তমানে চলমান"
+            },
+            "button": {
+                "movement": "অগ্রগতি"
+            }
+        },
+        "boxes": {
+            "totalPoint": "মোট পয়েন্ট",
+            "completed": "সম্পন্ন",
+            "remainder": "অবশিষ্ট",
+            "progress": "অগ্রগতি"
+        }
+    },
+    "shipments": {
+        "title": "শিপমেন্টসমূহ",
+        "currentShipment": "বর্তমান শিপমেন্ট",
+        "finishedShipment": "সমাপ্ত শিপমেন্ট",
+        "searchPlaceholder": "শিপমেন্ট খুঁজুন",
+        "card": {
+            "shipmentNumber": "শিপমেন্ট #{{shipmentNumber}}",
+            "showDetails": "বিবরণ দেখুন",
+            "points": "{{count}} পয়েন্ট"
+        },
+        "status": {
+            "complete": "সম্পূর্ণ",
+            "pause": "বিরতি",
+            "active": "সক্রিয়"
+        },
+        "error": {
+            "fetchShipments": "আমরা আপনার শিপমেন্টসমূহ আনতে পারিনি।"
+        },
+        "empty": "কোনো শিপমেন্ট পাওয়া যায়নি।",
+        "pagination": {
+            "previous": "পূর্ববর্তী",
+            "next": "পরবর্তী",
+            "page": "পৃষ্ঠা {{currentPage}} / {{totalPages}}"
+        }
+    },
+    "shipmentDetails": {
+        "error": {
+            "fetchDetails": "আমরা আপনার শিপমেন্টের বিবরণ আনতে পারিনি।"
+        },
+        "header": {
+            "title": "শিপমেন্ট #{{shipmentNumber}}"
+        },
+        "button": {
+            "finished": "সমাপ্ত",
+            "movement": "অগ্রগতি"
+        },
+        "details": {
+            "launchDate": "প্রস্থানের তারিখ",
+            "currentPoint": "বর্তমান পয়েন্ট",
+            "points": "পয়েন্টসমূহ",
+            "pointCount": "{{count}} পয়েন্ট",
+            "status": "অবস্থা",
+            "arrival": "পৌঁছানো"
+        },
+        "status": {
+            "complete": "সম্পূর্ণ",
+            "pause": "বিরতি",
+            "current": "বর্তমান"
+        },
+        "timeline": {
+            "title": "সমস্ত পয়েন্ট এবং সময়রেখা",
+            "currentPoint": "বর্তমান পয়েন্ট",
+            "completedPoint": "সমাপ্ত পয়েন্ট",
+            "nextPoint": "পরবর্তী পয়েন্ট",
+            "upcomingPoint": "আসন্ন পয়েন্ট"
+        },
+        "progress": {
+            "title": "অগ্রগতি",
+            "stopsComplete": "স্টপ সম্পন্ন",
+            "remainderPoint": "অবশিষ্ট পয়েন্ট"
+        },
+        "summary": {
+            "numberOfClient": "ক্লায়েন্টের সংখ্যা",
+            "numberOfItems": "আইটেমের সংখ্যা",
+            "clientLabel": "ক্লায়েন্ট",
+            "itemsLabel": "আইটেম",
+            "nextPoint": "পরবর্তী পয়েন্ট"
+        },
+        "loading": {
+            "title": "শিপমেন্ট"
+        }
+    },
+    "settings": {
+        "title": "সেটিংস",
+        "description": "আপনার অ্যাপের অভিজ্ঞতা, গোপনীয়তা এবং বিজ্ঞপ্তিগুলি নিয়ন্ত্রণ করুন।",
+        "preferences": "পছন্দসমূহ",
+        "support": "সহায়তা",
+        "darkMode": "ডার্ক মোড",
+        "language": "ভাষা",
+        "help": "সাহায্য",
+        "about": "সম্পর্কিত",
+        "theme": {
+            "light": "হালকা",
+            "dark": "অন্ধকার"
+        },
+        "cancel": "বাতিল করুন"
+    },
+    "about": {
+        "title": "S3 Tracking সম্পর্কে",
+        "subtitle": "দ্রুত, নির্ভরযোগ্য লজিস্টিক্সের জন্য তৈরি একটি স্মার্ট শিপমেন্ট ট্র্যাকিং সিস্টেম।",
+        "introTitle": "সিস্টেম সম্পর্কে",
+        "introText": "S3 Tracking ব্যবসা এবং ডেলিভারি দলের জন্য শিপমেন্ট মনিটরিংকে সহজ ও স্বচ্ছ করতে ডিজাইন করা হয়েছে। এটি একক মোবাইল অভিজ্ঞতায় লাইভ শিপমেন্ট স্ট্যাটাস, রুট অগ্রগতি এবং ডেলিভারি পয়েন্ট একত্রিত করে।",
+        "teamTitle": "ডেভেলপার তথ্য",
+        "teamText": "এই অ্যাপটি শিপমেন্ট মনিটরিংকে সহজ করে এবং ডেলিভারি অপারেশনগুলিতে আরও পরিষ্কার দৃশ্যমানতা প্রদান করতে তৈরি করা হয়েছে।",
+        "developerName": "Abdulrhman Muneer Al-Jaidi",
+        "developerRole": "সফ্টওয়্যার ইঞ্জিনিয়ার (MERN Stack, Next.js, Nest.js, React Native ও Expo)",
+        "contactTitle": "যোগাযোগ",
+        "contactText": "ডেভেলপমেন্ট বা সাপোর্ট অনুসন্ধানের জন্য, ফোন নম্বর বা ওয়েবসাইট ব্যবহার করুন।"
+    }
+}

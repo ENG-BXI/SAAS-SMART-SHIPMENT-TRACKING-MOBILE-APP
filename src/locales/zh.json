@@ -1,0 +1,200 @@
+{
+    "auth": {
+        "login": {
+            "title": "登录",
+            "subtitle": "输入您的邮箱和密码以登录。",
+            "fields": {
+                "email": "邮箱",
+                "password": "密码"
+            },
+            "button": {
+                "continue": "继续"
+            },
+            "sections": {
+                "credentials": {
+                    "title": "凭据",
+                    "description": "使用您注册的邮箱和密码。"
+                }
+            },
+            "validation": {
+                "emailRequired": "邮箱是必填项。",
+                "emailInvalid": "请输入有效的邮箱地址。",
+                "emailMin": "邮箱必须超过3个字母。",
+                "passwordRequired": "密码是必填项。",
+                "passwordMin": "密码必须至少包含8个字符。",
+                "passwordMax": "密码必须少于100个字符。"
+            },
+            "errors": {
+                "unexpected": "发生意外错误。"
+            }
+        }
+    },
+    "onboarding": {
+        "headerTitle": "S3 追踪系统",
+        "skip": "跳过",
+        "pages": [
+            {
+                "title": "货物配送现在更轻松",
+                "description": "现在，管理货物配送比以往任何时候都更简单。",
+                "image": "onboard1"
+            },
+            {
+                "title": "包裹追踪更安全",
+                "description": "追踪您的包裹可确保更安全的配送体验。",
+                "image": "onboard2"
+            },
+            {
+                "title": "使用积分获取运费优惠",
+                "description": "考虑使用积分来解锁独家运费优惠。",
+                "image": "onboard3"
+            }
+        ],
+        "button": {
+            "next": "下一步",
+            "start": "开始"
+        },
+        "footer": {
+            "agreement": "登录即表示您同意我们的服务条款和隐私政策。"
+        }
+    },
+    "shared": {
+        "pagination": {
+            "previous": "上一页",
+            "next": "下一页",
+            "page": "第 {{currentPage}} 页，共 {{totalPages}} 页"
+        }
+    },
+    "home": {
+        "error": {
+            "fetchShipment": "我们无法获取您的货运信息。"
+        },
+        "header": {
+            "greeting": "早上好，{{name}}",
+            "companySuffix": "公司"
+        },
+        "summary": {
+            "currentPoint": "当前积分",
+            "wayName": "路线名称",
+            "detailsTitle": "货运详情",
+            "shipmentNumber": "货运 #{{shipmentNumber}}",
+            "status": {
+                "complete": "已完成",
+                "pause": "已暂停",
+                "current": "进行中"
+            },
+            "description": {
+                "complete": "货运已完成",
+                "pause": "准备开始",
+                "current": "货运正在进行中"
+            },
+            "button": {
+                "movement": "动态"
+            }
+        },
+        "boxes": {
+            "totalPoint": "总积分",
+            "completed": "已完成",
+            "remainder": "剩余",
+            "progress": "进度"
+        }
+    },
+    "shipments": {
+        "title": "货运列表",
+        "currentShipment": "当前货运",
+        "finishedShipment": "已完成货运",
+        "searchPlaceholder": "搜索货运",
+        "card": {
+            "shipmentNumber": "货运 #{{shipmentNumber}}",
+            "showDetails": "查看详情",
+            "points": "{{count}} 积分"
+        },
+        "status": {
+            "complete": "已完成",
+            "pause": "已暂停",
+            "active": "进行中"
+        },
+        "error": {
+            "fetchShipments": "我们无法获取您的货运列表。"
+        },
+        "empty": "未找到货运。",
+        "pagination": {
+            "previous": "上一页",
+            "next": "下一页",
+            "page": "第 {{currentPage}} 页，共 {{totalPages}} 页"
+        }
+    },
+    "shipmentDetails": {
+        "error": {
+            "fetchDetails": "我们无法获取您的货运详情。"
+        },
+        "header": {
+            "title": "货运 #{{shipmentNumber}}"
+        },
+        "button": {
+            "finished": "已完成",
+            "movement": "动态"
+        },
+        "details": {
+            "launchDate": "出发日期",
+            "currentPoint": "当前积分",
+            "points": "积分",
+            "pointCount": "{{count}} 积分",
+            "status": "状态",
+            "arrival": "到达"
+        },
+        "status": {
+            "complete": "已完成",
+            "pause": "已暂停",
+            "current": "进行中"
+        },
+        "timeline": {
+            "title": "所有积分和时间线",
+            "currentPoint": "当前积分",
+            "completedPoint": "已完成积分",
+            "nextPoint": "下一个积分",
+            "upcomingPoint": "即将到来的积分"
+        },
+        "progress": {
+            "title": "进度",
+            "stopsComplete": "站点已完成",
+            "remainderPoint": "剩余积分"
+        },
+        "summary": {
+            "numberOfClient": "客户数量",
+            "numberOfItems": "物品数量",
+            "clientLabel": "客户",
+            "itemsLabel": "物品",
+            "nextPoint": "下一个积分"
+        },
+        "loading": {
+            "title": "货运"
+        }
+    },
+    "settings": {
+        "title": "设置",
+        "description": "控制您的应用体验、隐私和通知。",
+        "preferences": "偏好设置",
+        "support": "支持",
+        "darkMode": "夜间模式",
+        "language": "语言",
+        "help": "帮助",
+        "about": "关于",
+        "theme": {
+            "light": "浅色",
+            "dark": "深色"
+        },
+        "cancel": "取消"
+    },
+    "about": {
+        "title": "关于 S3 Tracking",
+        "subtitle": "一个为快速可靠的物流而设计的智能货运追踪系统。",
+        "introTitle": "关于系统",
+        "introText": "S3 Tracking 致力于让企业和配送团队的货运监控变得简单透明。它将实时货运状态、路线进展和配送节点整合到一个移动体验中。",
+        "teamTitle": "开发者信息",
+        "teamText": "此应用旨在简化货运监控并为配送操作提供更清晰的可见性。",
+        "developerName": "Abdulrhman Muneer Al-Jaidi",
+        "developerRole": "软件工程师 (MERN Stack、Next.js、Nest.js、React Native & Expo)",
+        "contactTitle": "联系方式",
+        "contactText": "如需开发咨询或支持，请使用下面的电话号码或网站。"
+    }
+}

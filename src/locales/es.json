@@ -1,0 +1,200 @@
+{
+    "auth": {
+        "login": {
+            "title": "Iniciar sesión",
+            "subtitle": "Introduce tu correo electrónico y contraseña para iniciar sesión.",
+            "fields": {
+                "email": "Correo electrónico",
+                "password": "Contraseña"
+            },
+            "button": {
+                "continue": "Continuar"
+            },
+            "sections": {
+                "credentials": {
+                    "title": "Credenciales",
+                    "description": "Usa tu correo electrónico y contraseña registrados."
+                }
+            },
+            "validation": {
+                "emailRequired": "El correo electrónico es obligatorio.",
+                "emailInvalid": "Introduce una dirección de correo electrónico válida.",
+                "emailMin": "El correo electrónico debe tener más de 3 letras.",
+                "passwordRequired": "La contraseña es obligatoria.",
+                "passwordMin": "La contraseña debe tener al menos 8 caracteres.",
+                "passwordMax": "La contraseña debe tener menos de 100 caracteres."
+            },
+            "errors": {
+                "unexpected": "Ocurrió un error inesperado."
+            }
+        }
+    },
+    "onboarding": {
+        "headerTitle": "Sistema de Seguimiento S3",
+        "skip": "Omitir",
+        "pages": [
+            {
+                "title": "La entrega de mercancías ahora es más fácil",
+                "description": "Ahora, gestionar la entrega de mercancías es más sencillo que nunca.",
+                "image": "onboard1"
+            },
+            {
+                "title": "El seguimiento de paquetes es más seguro",
+                "description": "Rastrear tu paquete garantiza una experiencia de entrega más segura.",
+                "image": "onboard2"
+            },
+            {
+                "title": "Usa puntos para ofertas de envío",
+                "description": "Considera utilizar puntos para desbloquear ofertas de envío exclusivas.",
+                "image": "onboard3"
+            }
+        ],
+        "button": {
+            "next": "Siguiente",
+            "start": "Comenzar"
+        },
+        "footer": {
+            "agreement": "Al iniciar sesión, aceptas nuestros Términos de servicio y la Política de privacidad."
+        }
+    },
+    "shared": {
+        "pagination": {
+            "previous": "Anterior",
+            "next": "Siguiente",
+            "page": "Página {{currentPage}} de {{totalPages}}"
+        }
+    },
+    "home": {
+        "error": {
+            "fetchShipment": "No pudimos obtener la información de tu envío."
+        },
+        "header": {
+            "greeting": "Buenos días, {{name}}",
+            "companySuffix": "Empresa"
+        },
+        "summary": {
+            "currentPoint": "Punto actual",
+            "wayName": "Nombre de la ruta",
+            "detailsTitle": "Detalles del envío",
+            "shipmentNumber": "Envío #{{shipmentNumber}}",
+            "status": {
+                "complete": "COMPLETADO",
+                "pause": "PAUSA",
+                "current": "ACTUAL"
+            },
+            "description": {
+                "complete": "El envío se ha completado",
+                "pause": "Listo para comenzar",
+                "current": "El envío está actualmente en progreso"
+            },
+            "button": {
+                "movement": "Movimiento"
+            }
+        },
+        "boxes": {
+            "totalPoint": "Punto total",
+            "completed": "Completado",
+            "remainder": "Restante",
+            "progress": "Progreso"
+        }
+    },
+    "shipments": {
+        "title": "Envíos",
+        "currentShipment": "Envío actual",
+        "finishedShipment": "Envío finalizado",
+        "searchPlaceholder": "Buscar envío",
+        "card": {
+            "shipmentNumber": "Envío #{{shipmentNumber}}",
+            "showDetails": "Mostrar detalles",
+            "points": "{{count}} Punto"
+        },
+        "status": {
+            "complete": "COMPLETADO",
+            "pause": "PAUSA",
+            "active": "ACTIVO"
+        },
+        "error": {
+            "fetchShipments": "No pudimos obtener tus envíos."
+        },
+        "empty": "No se encontraron envíos.",
+        "pagination": {
+            "previous": "Anterior",
+            "next": "Siguiente",
+            "page": "Página {{currentPage}} de {{totalPages}}"
+        }
+    },
+    "shipmentDetails": {
+        "error": {
+            "fetchDetails": "No pudimos obtener los detalles de tu envío."
+        },
+        "header": {
+            "title": "Envío #{{shipmentNumber}}"
+        },
+        "button": {
+            "finished": "Finalizado",
+            "movement": "Movimiento"
+        },
+        "details": {
+            "launchDate": "Fecha de lanzamiento",
+            "currentPoint": "Punto actual",
+            "points": "Puntos",
+            "pointCount": "{{count}} Punto",
+            "status": "Estado",
+            "arrival": "Llegada"
+        },
+        "status": {
+            "complete": "COMPLETADO",
+            "pause": "PAUSA",
+            "current": "ACTUAL"
+        },
+        "timeline": {
+            "title": "Todos los puntos y línea de tiempo",
+            "currentPoint": "Punto actual",
+            "completedPoint": "Punto completado",
+            "nextPoint": "Siguiente punto",
+            "upcomingPoint": "Próximo punto"
+        },
+        "progress": {
+            "title": "Progreso",
+            "stopsComplete": "Paradas completadas",
+            "remainderPoint": "Punto restante"
+        },
+        "summary": {
+            "numberOfClient": "Número de cliente",
+            "numberOfItems": "Número de artículos",
+            "clientLabel": "Cliente",
+            "itemsLabel": "Artículo",
+            "nextPoint": "Siguiente punto"
+        },
+        "loading": {
+            "title": "Envío"
+        }
+    },
+    "settings": {
+        "title": "Configuración",
+        "description": "Controla tu experiencia en la aplicación, privacidad y notificaciones.",
+        "preferences": "Preferencias",
+        "support": "Soporte",
+        "darkMode": "Modo oscuro",
+        "language": "Idioma",
+        "help": "Ayuda",
+        "about": "Acerca de",
+        "theme": {
+            "light": "Claro",
+            "dark": "Oscuro"
+        },
+        "cancel": "Cancelar"
+    },
+    "about": {
+        "title": "Acerca de S3 Tracking",
+        "subtitle": "Un sistema inteligente de rastreo de envíos diseñado para logística rápida y confiable.",
+        "introTitle": "Sobre el sistema",
+        "introText": "S3 Tracking está diseñado para hacer que el monitoreo de envíos sea sencillo y transparente para empresas y equipos de entrega. Reúne el estado de envío en vivo, el progreso de la ruta y los puntos de entrega en una sola experiencia móvil.",
+        "teamTitle": "Información del desarrollador",
+        "teamText": "Esta aplicación fue creada para simplificar el monitoreo de envíos y brindar una visibilidad más clara en las operaciones de entrega.",
+        "developerName": "Abdulrhman Muneer Al-Jaidi",
+        "developerRole": "Ingeniero de software (MERN Stack, Next.js, Nest.js, React Native y Expo)",
+        "contactTitle": "Contacto",
+        "contactText": "Para consultas de desarrollo o soporte, utiliza el número de teléfono o el sitio web a continuación."
+    }
+}

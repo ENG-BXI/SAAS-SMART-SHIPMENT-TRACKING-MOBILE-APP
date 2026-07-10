@@ -1,6 +1,6 @@
 import CustomHeader from '@/components/custom-header';
 import React from 'react';
-import {ScrollView, View} from 'react-native';
+import {RefreshControl, ScrollView, View} from 'react-native';
 import AllPointTimeLine from './components/all-point-time-line';
 import PointProgress from './components/point-progress';
 import ShipmentSummary from './components/shipment-summary';
@@ -13,6 +13,8 @@ import usePoint from '@/features/home/hook/use-point';
 import ErrorState from '@/components/error-state';
 import ShipmentDetailsSkeleton from './loading';
 import {useTranslation} from 'react-i18next';
+import {AntDesign} from '@expo/vector-icons';
+import {useMoveShipment} from '../api';
 type TDataParams = {
   way: {
     name: string;
@@ -33,7 +35,8 @@ const ShipmentDetails = () => {
   const {t} = useTranslation();
   const {id, data} = useLocalSearchParams<{id: string; data: string}>();
   const parseData = JSON.parse(data) as TDataParams;
-  const {data: shipmentData, isLoading, isError, error, refetch} = useShipmentDetails(id as string);
+  const {data: shipmentData, isLoading, isError, error, refetch, isRefetching} = useShipmentDetails(id as string);
+  const {mutate, isPending} = useMoveShipment(shipmentData?.data.data?.id!);
   if (isLoading) return <ShipmentDetailsSkeleton />;
   if (isError) return <ErrorState message={t('shipmentDetails.error.fetchDetails')} technicalError={error?.message} onRetry={refetch} />;
   const {completedLength, pointLength, progress, remainderLength, nextPointName} = usePoint({currentPointName: parseData.currentPoint, points: parseData.way.points});
@@ -41,12 +44,19 @@ const ShipmentDetails = () => {
   const status = parseData.isCompleted ? t('shipmentDetails.status.complete') : parseData.isPaused ? t('shipmentDetails.status.pause') : t('shipmentDetails.status.current');
   const isFinish = parseData.isCompleted;
   const shipmentTitle = shipment?.shipmentNumber ? t('shipmentDetails.header.title', {shipmentNumber: shipment.shipmentNumber}) : t('shipmentDetails.header.title', {shipmentNumber: id});
+
+  function handleMovement() {
+    mutate();
+  }
+  function onRefresh() {
+    refetch();
+  }
   return (
     <View className='px-4 flex-1 bg-white dark:bg-slate-950'>
       <CustomHeader title={shipmentTitle} hasBack description={status} descriptionClassName='text-custom-primary-color' />
-      <ScrollView className='flex-1 bg-white dark:bg-slate-950' showsVerticalScrollIndicator={false} contentContainerClassName='gap-4 pb-10'>
+      <ScrollView refreshControl={<RefreshControl refreshing={isRefetching} onRefresh={onRefresh} />} className='flex-1 bg-white dark:bg-slate-950' showsVerticalScrollIndicator={false} contentContainerClassName='gap-4 pb-10'>
         <ShipmentWatDetails wayName={shipment?.way.name} launchDate={shipment?.launchDate} endDate={shipment?.endDate} fromCity='' toCity='' pointLength={pointLength} currentPointName={parseData.currentPoint} status={status} />
-        <AllPointTimeLine currentPointName={parseData.currentPoint} points={parseData.way.points} />
+        <AllPointTimeLine currentPointName={shipment?.currentPoint.name} points={parseData.way.points} />
         <PointProgress completedLength={completedLength} pointLength={pointLength} progress={progress} remainderLength={remainderLength} />
         <ShipmentSummary nextPoint={nextPointName} numberOfClient={shipment?.clients} numberOfItem={shipment?.shipmentItem} />
         {isFinish ? (
@@ -54,8 +64,8 @@ const ShipmentDetails = () => {
             <Text className='text-black dark:text-white'>{t('shipmentDetails.button.finished')}</Text>
           </Button>
         ) : (
-          <Button variant={'primary'} size={'lg'} className='mb-10'>
-            <Text className='text-white'>{t('shipmentDetails.button.movement')}</Text>
+          <Button onPress={handleMovement} variant={'primary'} size={'lg'} className='mb-10'>
+            {isPending ? <AntDesign name='loading-3-quarters' className='animate-spin' size={24} color='black' /> : <Text className='text-white'>{t('shipmentDetails.button.movement')}</Text>}
           </Button>
         )}
       </ScrollView>

@@ -3,6 +3,7 @@ import {Image} from 'expo-image';
 import React, {memo} from 'react';
 import {View} from 'react-native';
 import {useTranslation} from 'react-i18next';
+import {useLanguage} from '@/hooks/useLanguage';
 
 interface HeaderAndBoxProps {
   name?: string;
@@ -10,6 +11,7 @@ interface HeaderAndBoxProps {
 }
 function HeaderAndBox({name, companyName}: HeaderAndBoxProps) {
   const {t} = useTranslation();
+  const {isRtl} = useLanguage();
   return (
     <View className='flex-row items-center justify-between bg-white dark:bg-slate-950 px-5 py-4 rounded-3xl shadow-sm shadow-black/5 dark:shadow-black/20'>
       <View>
@@ -18,7 +20,7 @@ function HeaderAndBox({name, companyName}: HeaderAndBoxProps) {
           {companyName} {t('home.header.companySuffix')}
         </Text>
       </View>
-      <Image source={require('@/assets/images/home-box.png')} style={{width: 250, height: 250}} />
+      <Image source={require('@/assets/images/home-box.png')} style={{width: 250, transform: [{scaleX: isRtl ? -1 : 1}], height: 250}} />
     </View>
   );
 }

@@ -57,6 +57,13 @@
             "agreement": "By Login, you agree to our Terms of service and Terms and Privacy and policy."
         }
     },
+    "shared": {
+        "pagination": {
+            "previous": "Previous",
+            "next": "Next",
+            "page": "Page {{currentPage}} of {{totalPages}}"
+        }
+    },
     "home": {
         "error": {
             "fetchShipment": "We couldn't fetch your shipment information."
@@ -108,6 +115,12 @@
         },
         "error": {
             "fetchShipments": "We couldn't fetch your shipments."
+        },
+        "empty": "No shipments found.",
+        "pagination": {
+            "previous": "Previous",
+            "next": "Next",
+            "page": "Page {{currentPage}} of {{totalPages}}"
         }
     },
     "shipmentDetails": {
@@ -170,9 +183,18 @@
             "light": "Light",
             "dark": "Dark"
         },
-        "languageOptions": {
-            "en": "English",
-            "ar": "Arabic"
-        }
+        "cancel": "Cancel"
+    },
+    "about": {
+        "title": "About S3 Tracking",
+        "subtitle": "A smarter shipment tracking system built for fast, reliable logistics.",
+        "introTitle": "About the System",
+        "introText": "S3 Tracking is designed to make shipment monitoring simple and transparent for businesses and delivery teams. It brings together live shipment status, route progress, and delivery checkpoints in a single mobile experience that works with modern logistics workflows.",
+        "teamTitle": "Developer Info",
+        "teamText": "This application was built to simplify shipment monitoring and provide clear delivery visibility for logistics teams.",
+        "developerName": "Abdulrhman Muneer Al-Jaaeidi",
+        "developerRole": "Software Engineer (MERN Stack, Next.js, Nest.js, React Native & Expo)",
+        "contactTitle": "Contact",
+        "contactText": "For development inquiries or support, use the phone number or visit the website below."
     }
 }

@@ -1,56 +1,100 @@
-# Welcome to your Expo app 👋
+# SAAS Smart Shipment Tracking — Mobile App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A production-ready Expo mobile application for shipment tracking, built with React Native, Expo Router, and multilingual support.
 
-## Get started
+## Overview
 
-1. Install dependencies
+This mobile app is part of a logistics platform, focused on delivering package tracking and driver operations through a modern native interface.
 
-   ```bash
-   npm install
-   ```
+The app includes:
 
-2. Start the app
+- Expo Router-based navigation
+- `react-i18next` localization with 10 supported languages
+- Dark mode and RTL layout support
+- Secure storage for user settings and language preference
+- Native settings screen with language selection and about page
+- Mobile-friendly tracking UI and shipment status views
 
-   ```bash
-   npx expo start
-   ```
+## Key features
 
-In the output, you'll find options to open the app in a
+- **Localization**: English, Arabic, Chinese, Hindi, Spanish, French, Bengali, Portuguese, Russian, Urdu
+- **RTL support**: automatic layout direction for Arabic and Urdu
+- **Dark mode**: theme switching built into the settings screen
+- **About page**: developer information and contact links
+- **Secure storage**: selected language persistence via `expo-secure-store`
+- **Modern UI**: Tailwind-style UI with NativeWind and custom components
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Requirements
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Node.js 20+ recommended
+- Expo CLI installed globally or use `npx expo`
+- Android Studio / iOS Simulator for native testing
+- Optional: device testing via Expo Development Client
 
-## Get a fresh project
-
-When you're ready, run:
+## Setup
 
 ```bash
-npm run reset-project
+cd mobile-app
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Run locally
 
-### Other setup steps
+```bash
+cd mobile-app
+npm run start
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Then choose one of the available targets in the Expo CLI output:
 
-## Learn more
+- Android emulator
+- iOS simulator
+- Web browser
+- Expo Go / Development Client
 
-To learn more about developing your project with Expo, look at the following resources:
+## Useful scripts
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm run start      # Start Expo development server
+npm run android    # Run on Android device or emulator
+npm run ios        # Run on iOS simulator
+npm run web        # Run web version in browser
+npm run lint       # Run Expo linting
+```
 
-## Join the community
+## Project structure
 
-Join our community of developers creating universal apps.
+```text
+mobile-app/            
+├── assets/            # Images, fonts, icons, and static assets
+├── src/               # App source code
+│   ├── app/           # Expo Router screens and layouts
+│   ├── components/    # Shared UI components
+│   ├── features/      # Feature-based screens and components
+│   ├── hooks/         # Custom hooks
+│   ├── i18n/          # i18n initialization
+│   ├── lib/           # Constants and utilities
+│   └── locales/       # Translation JSON files
+├── package.json       # Expo package config and scripts
+└── README.md          # Mobile app documentation
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Translation support
+
+The mobile app supports translations for the settings screen, onboarding, shipment flow, and the About page. Language selection is stored securely and applied across the app.
+
+## Developer info
+
+- **Name:** Abdulrhman Muneer Al-Jaidi
+- **Role:** Software Engineer (MERN Stack, Next.js, Nest.js, React Native & Expo)
+- **Website:** https://abdulrhman-portfolio-code.vercel.app/
+
+## Notes
+
+- Use the `universal-cookie` package only in the web code if needed.
+- Keep translation keys consistent in `src/locales/*.json`.
+- The app is built with Expo SDK 57 and NativeWind for styling.
+
+## License
+
+This repo is currently private.
