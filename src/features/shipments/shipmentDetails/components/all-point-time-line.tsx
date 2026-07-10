@@ -5,7 +5,7 @@ import {timelineData} from '@/features/home/type';
 import React from 'react';
 import {useTranslation} from 'react-i18next';
 interface AllPointTimeLineProps {
-  currentPointName: string;
+  currentPointName?: string;
   points: {
     id: string;
     lat: string;

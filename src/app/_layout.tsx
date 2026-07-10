@@ -7,14 +7,15 @@ import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import {initI18n} from '@/i18n';
 import {ThemeModeProvider} from '../hooks/use-theme-mode';
 import { useLanguage } from '@/hooks/useLanguage';
+import { SupportedLanguage } from '@/lib/language';
 
 export default function RootLayout() {
   const [ready, setReady] = useState(false);
-  const [language, setLanguage] = useState<'en' | 'ar'>('en');
-  const {language:lng} = useLanguage();
+  const [language, setLanguage] = useState<SupportedLanguage>('en');
+  const {language: lng,isRtl} = useLanguage();
   useEffect(() => {
-      setLanguage(lng as 'en' | 'ar');
-  },[lng])
+      setLanguage(lng);
+  },[lng]);
   useEffect(() => {
     initI18n().then(lang => {
       setLanguage(lang);
@@ -34,8 +35,10 @@ export default function RootLayout() {
       background: '#fff'
     }
   };
+ 
+
   return (
-    <SafeAreaView style={{direction:language=='ar'?'rtl':'ltr'}} className='flex-1 container bg-background dark:bg-slate-950'>
+    <SafeAreaView style={{direction: isRtl ? 'rtl' : 'ltr'}} className='flex-1 container bg-background dark:bg-slate-950'>
       <QueryClientProvider client={queryClient}>
         <ThemeModeProvider>
           <ThemeProvider value={MyTheme}>

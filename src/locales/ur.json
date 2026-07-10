@@ -1,0 +1,200 @@
+{
+    "auth": {
+        "login": {
+            "title": "لاگ ان کریں",
+            "subtitle": "لاگ ان کرنے کے لیے اپنا ای میل اور پاس ورڈ درج کریں۔",
+            "fields": {
+                "email": "ای میل",
+                "password": "پاس ورڈ"
+            },
+            "button": {
+                "continue": "جاری رکھیں"
+            },
+            "sections": {
+                "credentials": {
+                    "title": "اسناد",
+                    "description": "اپنا رجسٹرڈ ای میل اور پاس ورڈ استعمال کریں۔"
+                }
+            },
+            "validation": {
+                "emailRequired": "ای میل درکار ہے۔",
+                "emailInvalid": "ایک درست ای میل پتہ درج کریں۔",
+                "emailMin": "ای میل 3 حروف سے زیادہ ہونا چاہیے۔",
+                "passwordRequired": "پاس ورڈ درکار ہے۔",
+                "passwordMin": "پاس ورڈ کم از کم 8 حروف کا ہونا چاہیے۔",
+                "passwordMax": "پاس ورڈ 100 حروف سے کم ہونا چاہیے۔"
+            },
+            "errors": {
+                "unexpected": "ایک غیر متوقع خرابی پیش آگئی۔"
+            }
+        }
+    },
+    "onboarding": {
+        "headerTitle": "S3 ٹریکنگ سسٹم",
+        "skip": "چھوڑیں",
+        "pages": [
+            {
+                "title": "مال کی ترسیل اب آسان ہوگئی ہے",
+                "description": "اب، مال کی ترسیل کا انتظام پہلے سے کہیں زیادہ آسان ہوگیا ہے۔",
+                "image": "onboard1"
+            },
+            {
+                "title": "پیکیج ٹریکنگ زیادہ محفوظ ہے",
+                "description": "اپنے پیکیج کو ٹریک کرنا ایک محفوظ ترسیل کا تجربہ یقینی بناتا ہے۔",
+                "image": "onboard2"
+            },
+            {
+                "title": "شپنگ ڈیلز کے لیے پوائنٹس استعمال کریں",
+                "description": "خصوصی شپنگ ڈیلز حاصل کرنے کے لیے پوائنٹس استعمال کرنے پر غور کریں۔",
+                "image": "onboard3"
+            }
+        ],
+        "button": {
+            "next": "اگلا",
+            "start": "شروع کریں"
+        },
+        "footer": {
+            "agreement": "لاگ ان کرکے، آپ ہماری سروس کی شرائط اور رازداری کی پالیسی سے اتفاق کرتے ہیں۔"
+        }
+    },
+    "shared": {
+        "pagination": {
+            "previous": "پچھلا",
+            "next": "اگلا",
+            "page": "صفحہ {{currentPage}} / {{totalPages}}"
+        }
+    },
+    "home": {
+        "error": {
+            "fetchShipment": "ہم آپ کی شپمنٹ کی معلومات حاصل نہیں کر سکے۔"
+        },
+        "header": {
+            "greeting": "صبح بخیر، {{name}}",
+            "companySuffix": "کمپنی"
+        },
+        "summary": {
+            "currentPoint": "موجودہ پوائنٹ",
+            "wayName": "راستے کا نام",
+            "detailsTitle": "شپمنٹ کی تفصیلات",
+            "shipmentNumber": "شپمنٹ #{{shipmentNumber}}",
+            "status": {
+                "complete": "مکمل",
+                "pause": "وقفہ",
+                "current": "موجودہ"
+            },
+            "description": {
+                "complete": "شپمنٹ مکمل ہوگئی ہے",
+                "pause": "شروع کرنے کے لیے تیار",
+                "current": "شپمنٹ فی الحال جاری ہے"
+            },
+            "button": {
+                "movement": "نقل و حرکت"
+            }
+        },
+        "boxes": {
+            "totalPoint": "کل پوائنٹ",
+            "completed": "مکمل",
+            "remainder": "باقی",
+            "progress": "پیش رفت"
+        }
+    },
+    "shipments": {
+        "title": "شپمنٹس",
+        "currentShipment": "موجودہ شپمنٹ",
+        "finishedShipment": "مکمل شپمنٹ",
+        "searchPlaceholder": "شپمنٹ تلاش کریں",
+        "card": {
+            "shipmentNumber": "شپمنٹ #{{shipmentNumber}}",
+            "showDetails": "تفصیلات دکھائیں",
+            "points": "{{count}} پوائنٹ"
+        },
+        "status": {
+            "complete": "مکمل",
+            "pause": "وقفہ",
+            "active": "فعال"
+        },
+        "error": {
+            "fetchShipments": "ہم آپ کی شپمنٹس حاصل نہیں کر سکے۔"
+        },
+        "empty": "کوئی شپمنٹ نہیں ملی۔",
+        "pagination": {
+            "previous": "پچھلا",
+            "next": "اگلا",
+            "page": "صفحہ {{currentPage}} / {{totalPages}}"
+        }
+    },
+    "shipmentDetails": {
+        "error": {
+            "fetchDetails": "ہم آپ کی شپمنٹ کی تفصیلات حاصل نہیں کر سکے۔"
+        },
+        "header": {
+            "title": "شپمنٹ #{{shipmentNumber}}"
+        },
+        "button": {
+            "finished": "مکمل",
+            "movement": "نقل و حرکت"
+        },
+        "details": {
+            "launchDate": "روانگی کی تاریخ",
+            "currentPoint": "موجودہ پوائنٹ",
+            "points": "پوائنٹس",
+            "pointCount": "{{count}} پوائنٹ",
+            "status": "حیثیت",
+            "arrival": "آمد"
+        },
+        "status": {
+            "complete": "مکمل",
+            "pause": "وقفہ",
+            "current": "موجودہ"
+        },
+        "timeline": {
+            "title": "تمام پوائنٹس اور ٹائم لائن",
+            "currentPoint": "موجودہ پوائنٹ",
+            "completedPoint": "مکمل پوائنٹ",
+            "nextPoint": "اگلا پوائنٹ",
+            "upcomingPoint": "آنے والا پوائنٹ"
+        },
+        "progress": {
+            "title": "پیش رفت",
+            "stopsComplete": "اسٹاپس مکمل",
+            "remainderPoint": "باقی پوائنٹ"
+        },
+        "summary": {
+            "numberOfClient": "کلائنٹس کی تعداد",
+            "numberOfItems": "آئٹمز کی تعداد",
+            "clientLabel": "کلائنٹ",
+            "itemsLabel": "آئٹم",
+            "nextPoint": "اگلا پوائنٹ"
+        },
+        "loading": {
+            "title": "شپمنٹ"
+        }
+    },
+    "settings": {
+        "title": "ترتیبات",
+        "description": "اپنے ایپ کے تجربے، رازداری اور اطلاعات کو کنٹرول کریں۔",
+        "preferences": "ترجیحات",
+        "support": "معاونت",
+        "darkMode": "ڈارک موڈ",
+        "language": "زبان",
+        "help": "مدد",
+        "about": "کے بارے میں",
+        "theme": {
+            "light": "ہلکا",
+            "dark": "ڈارک"
+        },
+        "cancel": "منسوخ کریں"
+    },
+    "about": {
+        "title": "S3 Tracking کے بارے میں",
+        "subtitle": "تیز اور قابل اعتماد لاجسٹکس کے لئے ایک سمارٹ شپمنٹ ٹریکنگ سسٹم۔",
+        "introTitle": "سسٹم کے بارے میں",
+        "introText": "S3 Tracking کو کاروباروں اور ڈلیوری ٹیموں کے لئے شپمنٹ مانیٹرنگ کو آسان اور شفاف بنانے کے لئے ڈیزائن کیا گیا ہے۔ یہ لائیو شپمنٹ کی حالت، راستے کی پیش رفت، اور ڈلیوری پوائنٹس کو ایک موبائل تجربے میں یکجا کرتا ہے۔",
+        "teamTitle": "ڈویلپر معلومات",
+        "teamText": "یہ ایپ شپمنٹ مانیٹرنگ کو آسان بنانے اور ڈلیوری آپریشنز میں واضحیت فراہم کرنے کے لئے بنائی گئی ہے۔",
+        "developerName": "Abdulrhman Muneer Al-Jaidi",
+        "developerRole": "سافٹ ویئر انجینئر (MERN Stack، Next.js، Nest.js، React Native & Expo)",
+        "contactTitle": "رابطہ",
+        "contactText": "ڈیویلپمنٹ یا سپورٹ کے سوالات کے لئے، نیچے دیے گئے فون نمبر یا ویب سائٹ استعمال کریں۔"
+    }
+}

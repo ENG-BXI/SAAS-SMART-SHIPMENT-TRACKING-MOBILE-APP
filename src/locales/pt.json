@@ -1,0 +1,200 @@
+{
+    "auth": {
+        "login": {
+            "title": "Entrar",
+            "subtitle": "Digite seu e-mail e senha para entrar.",
+            "fields": {
+                "email": "E-mail",
+                "password": "Senha"
+            },
+            "button": {
+                "continue": "Continuar"
+            },
+            "sections": {
+                "credentials": {
+                    "title": "Credenciais",
+                    "description": "Use seu e-mail e senha registrados."
+                }
+            },
+            "validation": {
+                "emailRequired": "O e-mail é obrigatório.",
+                "emailInvalid": "Digite um endereço de e-mail válido.",
+                "emailMin": "O e-mail deve ter mais de 3 letras.",
+                "passwordRequired": "A senha é obrigatória.",
+                "passwordMin": "A senha deve ter pelo menos 8 caracteres.",
+                "passwordMax": "A senha deve ter menos de 100 caracteres."
+            },
+            "errors": {
+                "unexpected": "Ocorreu um erro inesperado."
+            }
+        }
+    },
+    "onboarding": {
+        "headerTitle": "Sistema de Rastreamento S3",
+        "skip": "Pular",
+        "pages": [
+            {
+                "title": "A entrega de mercadorias agora é mais fácil",
+                "description": "Agora, gerenciar a entrega de mercadorias tornou-se mais simples do que nunca.",
+                "image": "onboard1"
+            },
+            {
+                "title": "O rastreamento de pacotes é mais seguro",
+                "description": "Rastrear seu pacote garante uma experiência de entrega mais segura.",
+                "image": "onboard2"
+            },
+            {
+                "title": "Use pontos para ofertas de envio",
+                "description": "Considere usar pontos para desbloquear ofertas de envio exclusivas.",
+                "image": "onboard3"
+            }
+        ],
+        "button": {
+            "next": "Próximo",
+            "start": "Começar"
+        },
+        "footer": {
+            "agreement": "Ao entrar, você concorda com nossos Termos de Serviço e Política de Privacidade."
+        }
+    },
+    "shared": {
+        "pagination": {
+            "previous": "Anterior",
+            "next": "Próximo",
+            "page": "Página {{currentPage}} de {{totalPages}}"
+        }
+    },
+    "home": {
+        "error": {
+            "fetchShipment": "Não foi possível obter as informações do seu envio."
+        },
+        "header": {
+            "greeting": "Bom dia, {{name}}",
+            "companySuffix": "Empresa"
+        },
+        "summary": {
+            "currentPoint": "Ponto atual",
+            "wayName": "Nome da rota",
+            "detailsTitle": "Detalhes do envio",
+            "shipmentNumber": "Envio #{{shipmentNumber}}",
+            "status": {
+                "complete": "CONCLUÍDO",
+                "pause": "PAUSA",
+                "current": "ATUAL"
+            },
+            "description": {
+                "complete": "O envio foi concluído",
+                "pause": "Pronto para começar",
+                "current": "O envio está atualmente em andamento"
+            },
+            "button": {
+                "movement": "Movimento"
+            }
+        },
+        "boxes": {
+            "totalPoint": "Ponto total",
+            "completed": "Concluído",
+            "remainder": "Restante",
+            "progress": "Progresso"
+        }
+    },
+    "shipments": {
+        "title": "Envios",
+        "currentShipment": "Envio atual",
+        "finishedShipment": "Envio finalizado",
+        "searchPlaceholder": "Pesquisar envio",
+        "card": {
+            "shipmentNumber": "Envio #{{shipmentNumber}}",
+            "showDetails": "Mostrar detalhes",
+            "points": "{{count}} Ponto"
+        },
+        "status": {
+            "complete": "CONCLUÍDO",
+            "pause": "PAUSA",
+            "active": "ATIVO"
+        },
+        "error": {
+            "fetchShipments": "Não foi possível obter seus envios."
+        },
+        "empty": "Nenhum envio encontrado.",
+        "pagination": {
+            "previous": "Anterior",
+            "next": "Próximo",
+            "page": "Página {{currentPage}} de {{totalPages}}"
+        }
+    },
+    "shipmentDetails": {
+        "error": {
+            "fetchDetails": "Não foi possível obter os detalhes do seu envio."
+        },
+        "header": {
+            "title": "Envio #{{shipmentNumber}}"
+        },
+        "button": {
+            "finished": "Finalizado",
+            "movement": "Movimento"
+        },
+        "details": {
+            "launchDate": "Data de lançamento",
+            "currentPoint": "Ponto atual",
+            "points": "Pontos",
+            "pointCount": "{{count}} Ponto",
+            "status": "Status",
+            "arrival": "Chegada"
+        },
+        "status": {
+            "complete": "CONCLUÍDO",
+            "pause": "PAUSA",
+            "current": "ATUAL"
+        },
+        "timeline": {
+            "title": "Todos os pontos e linha do tempo",
+            "currentPoint": "Ponto atual",
+            "completedPoint": "Ponto concluído",
+            "nextPoint": "Próximo ponto",
+            "upcomingPoint": "Próximo ponto"
+        },
+        "progress": {
+            "title": "Progresso",
+            "stopsComplete": "Paradas concluídas",
+            "remainderPoint": "Ponto restante"
+        },
+        "summary": {
+            "numberOfClient": "Número de clientes",
+            "numberOfItems": "Número de itens",
+            "clientLabel": "Cliente",
+            "itemsLabel": "Item",
+            "nextPoint": "Próximo ponto"
+        },
+        "loading": {
+            "title": "Envio"
+        }
+    },
+    "settings": {
+        "title": "Configurações",
+        "description": "Controle sua experiência no aplicativo, privacidade e notificações.",
+        "preferences": "Preferências",
+        "support": "Suporte",
+        "darkMode": "Modo escuro",
+        "language": "Idioma",
+        "help": "Ajuda",
+        "about": "Sobre",
+        "theme": {
+            "light": "Claro",
+            "dark": "Escuro"
+        },
+        "cancel": "Cancelar"
+    },
+    "about": {
+        "title": "Sobre o S3 Tracking",
+        "subtitle": "Um sistema inteligente de rastreamento de envios projetado para logística rápida e confiável.",
+        "introTitle": "Sobre o sistema",
+        "introText": "O S3 Tracking foi projetado para tornar o monitoramento de envios simples e transparente para empresas e equipes de entrega. Ele reúne status de envio em tempo real, progresso da rota e pontos de entrega em uma única experiência móvel.",
+        "teamTitle": "Informações do desenvolvedor",
+        "teamText": "Este aplicativo foi criado para simplificar o monitoramento de envios e oferecer uma visibilidade mais clara nas operações de entrega.",
+        "developerName": "Abdulrhman Muneer Al-Jaidi",
+        "developerRole": "Engenheiro de software (MERN Stack, Next.js, Nest.js, React Native & Expo)",
+        "contactTitle": "Contato",
+        "contactText": "Para dúvidas de desenvolvimento ou suporte, use o número de telefone ou o site abaixo."
+    }
+}

@@ -1,0 +1,200 @@
+{
+    "auth": {
+        "login": {
+            "title": "लॉगिन करें",
+            "subtitle": "लॉगिन करने के लिए अपना ईमेल और पासवर्ड दर्ज करें।",
+            "fields": {
+                "email": "ईमेल",
+                "password": "पासवर्ड"
+            },
+            "button": {
+                "continue": "जारी रखें"
+            },
+            "sections": {
+                "credentials": {
+                    "title": "प्रमाण-पत्र",
+                    "description": "अपना पंजीकृत ईमेल और पासवर्ड उपयोग करें।"
+                }
+            },
+            "validation": {
+                "emailRequired": "ईमेल आवश्यक है।",
+                "emailInvalid": "एक मान्य ईमेल पता दर्ज करें।",
+                "emailMin": "ईमेल 3 अक्षरों से अधिक होना चाहिए।",
+                "passwordRequired": "पासवर्ड आवश्यक है।",
+                "passwordMin": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए।",
+                "passwordMax": "पासवर्ड 100 अक्षरों से कम होना चाहिए।"
+            },
+            "errors": {
+                "unexpected": "एक अप्रत्याशित त्रुटि उत्पन्न हुई।"
+            }
+        }
+    },
+    "onboarding": {
+        "headerTitle": "S3 ट्रैकिंग सिस्टम",
+        "skip": "छोड़ें",
+        "pages": [
+            {
+                "title": "माल की डिलीवरी अब आसान हो गई है",
+                "description": "अब, माल की डिलीवरी का प्रबंधन पहले से कहीं अधिक सरल हो गया है।",
+                "image": "onboard1"
+            },
+            {
+                "title": "पैकेज ट्रैकिंग अधिक सुरक्षित है",
+                "description": "अपने पैकेज को ट्रैक करना एक सुरक्षित डिलीवरी अनुभव सुनिश्चित करता है।",
+                "image": "onboard2"
+            },
+            {
+                "title": "शिपिंग डील के लिए पॉइंट्स का उपयोग करें",
+                "description": "विशेष शिपिंग डील अनलॉक करने के लिए पॉइंट्स का उपयोग करने पर विचार करें।",
+                "image": "onboard3"
+            }
+        ],
+        "button": {
+            "next": "अगला",
+            "start": "शुरू करें"
+        },
+        "footer": {
+            "agreement": "लॉगिन करके, आप हमारी सेवा की शर्तों और गोपनीयता नीति से सहमत होते हैं।"
+        }
+    },
+    "shared": {
+        "pagination": {
+            "previous": "पिछला",
+            "next": "अगला",
+            "page": "पृष्ठ {{currentPage}} / {{totalPages}}"
+        }
+    },
+    "home": {
+        "error": {
+            "fetchShipment": "हम आपकी शिपमेंट जानकारी प्राप्त नहीं कर सके।"
+        },
+        "header": {
+            "greeting": "सुप्रभात, {{name}}",
+            "companySuffix": "कंपनी"
+        },
+        "summary": {
+            "currentPoint": "वर्तमान पॉइंट",
+            "wayName": "मार्ग का नाम",
+            "detailsTitle": "शिपमेंट विवरण",
+            "shipmentNumber": "शिपमेंट #{{shipmentNumber}}",
+            "status": {
+                "complete": "पूर्ण",
+                "pause": "विराम",
+                "current": "वर्तमान"
+            },
+            "description": {
+                "complete": "शिपमेंट पूरा हो गया है",
+                "pause": "शुरू करने के लिए तैयार",
+                "current": "शिपमेंट वर्तमान में प्रगति पर है"
+            },
+            "button": {
+                "movement": "गतिविधि"
+            }
+        },
+        "boxes": {
+            "totalPoint": "कुल पॉइंट",
+            "completed": "पूर्ण",
+            "remainder": "शेष",
+            "progress": "प्रगति"
+        }
+    },
+    "shipments": {
+        "title": "शिपमेंट्स",
+        "currentShipment": "वर्तमान शिपमेंट",
+        "finishedShipment": "समाप्त शिपमेंट",
+        "searchPlaceholder": "शिपमेंट खोजें",
+        "card": {
+            "shipmentNumber": "शिपमेंट #{{shipmentNumber}}",
+            "showDetails": "विवरण दिखाएँ",
+            "points": "{{count}} पॉइंट"
+        },
+        "status": {
+            "complete": "पूर्ण",
+            "pause": "विराम",
+            "active": "सक्रिय"
+        },
+        "error": {
+            "fetchShipments": "हम आपकी शिपमेंट्स प्राप्त नहीं कर सके।"
+        },
+        "empty": "कोई शिपमेंट नहीं मिला।",
+        "pagination": {
+            "previous": "पिछला",
+            "next": "अगला",
+            "page": "पृष्ठ {{currentPage}} / {{totalPages}}"
+        }
+    },
+    "shipmentDetails": {
+        "error": {
+            "fetchDetails": "हम आपके शिपमेंट का विवरण प्राप्त नहीं कर सके।"
+        },
+        "header": {
+            "title": "शिपमेंट #{{shipmentNumber}}"
+        },
+        "button": {
+            "finished": "समाप्त",
+            "movement": "गतिविधि"
+        },
+        "details": {
+            "launchDate": "प्रारंभ तिथि",
+            "currentPoint": "वर्तमान पॉइंट",
+            "points": "पॉइंट्स",
+            "pointCount": "{{count}} पॉइंट",
+            "status": "स्थिति",
+            "arrival": "आगमन"
+        },
+        "status": {
+            "complete": "पूर्ण",
+            "pause": "विराम",
+            "current": "वर्तमान"
+        },
+        "timeline": {
+            "title": "सभी पॉइंट्स और समयरेखा",
+            "currentPoint": "वर्तमान पॉइंट",
+            "completedPoint": "पूर्ण पॉइंट",
+            "nextPoint": "अगला पॉइंट",
+            "upcomingPoint": "आगामी पॉइंट"
+        },
+        "progress": {
+            "title": "प्रगति",
+            "stopsComplete": "स्टॉप पूर्ण",
+            "remainderPoint": "शेष पॉइंट"
+        },
+        "summary": {
+            "numberOfClient": "ग्राहकों की संख्या",
+            "numberOfItems": "वस्तुओं की संख्या",
+            "clientLabel": "ग्राहक",
+            "itemsLabel": "वस्तु",
+            "nextPoint": "अगला पॉइंट"
+        },
+        "loading": {
+            "title": "शिपमेंट"
+        }
+    },
+    "settings": {
+        "title": "सेटिंग्स",
+        "description": "अपने ऐप अनुभव, गोपनीयता और सूचनाओं को नियंत्रित करें।",
+        "preferences": "पसंद",
+        "support": "सहायता",
+        "darkMode": "डार्क मोड",
+        "language": "भाषा",
+        "help": "मदद",
+        "about": "बारे में",
+        "theme": {
+            "light": "लाइट",
+            "dark": "डार्क"
+        },
+        "cancel": "रद्द करें"
+    },
+    "about": {
+        "title": "S3 Tracking के बारे में",
+        "subtitle": "तेज़ और विश्वसनीय लॉजिस्टिक्स के लिए तैयार एक स्मार्ट शिपमेंट ट्रैकिंग सिस्टम।",
+        "introTitle": "सिस्टम के बारे में",
+        "introText": "S3 Tracking को व्यवसायों और डिलीवरी टीमों के लिए शिपमेंट की निगरानी को सरल और पारदर्शी बनाने के लिए डिज़ाइन किया गया है। यह लाइव शिपमेंट स्थिति, मार्ग प्रगति और डिलीवरी पॉइंट्स को एक ही मोबाइल अनुभव में एकत्र करता है।",
+        "teamTitle": "डेवलपर जानकारी",
+        "teamText": "यह एप्लिकेशन शिपमेंट मॉनिटरिंग को सरल बनाने और डिलीवरी ऑपरेशनों में स्पष्टता बढ़ाने के लिए बनाया गया है।",
+        "developerName": "Abdulrhman Muneer Al-Jaidi",
+        "developerRole": "सॉफ़्टवेयर इंजीनियर (MERN Stack, Next.js, Nest.js, React Native & Expo)",
+        "contactTitle": "संपर्क",
+        "contactText": "डेवलपमेंट या सपोर्ट प्रश्नों के लिए, नीचे दिए गए फोन नंबर या वेबसाइट का उपयोग करें।"
+    }
+}

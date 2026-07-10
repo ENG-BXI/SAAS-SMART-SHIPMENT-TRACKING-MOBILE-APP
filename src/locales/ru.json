@@ -1,0 +1,200 @@
+{
+    "auth": {
+        "login": {
+            "title": "Вход",
+            "subtitle": "Введите ваш email и пароль для входа.",
+            "fields": {
+                "email": "Email",
+                "password": "Пароль"
+            },
+            "button": {
+                "continue": "Продолжить"
+            },
+            "sections": {
+                "credentials": {
+                    "title": "Учётные данные",
+                    "description": "Используйте ваш зарегистрированный email и пароль."
+                }
+            },
+            "validation": {
+                "emailRequired": "Email обязателен.",
+                "emailInvalid": "Введите действительный адрес email.",
+                "emailMin": "Email должен содержать более 3 букв.",
+                "passwordRequired": "Пароль обязателен.",
+                "passwordMin": "Пароль должен содержать не менее 8 символов.",
+                "passwordMax": "Пароль должен содержать менее 100 символов."
+            },
+            "errors": {
+                "unexpected": "Произошла непредвиденная ошибка."
+            }
+        }
+    },
+    "onboarding": {
+        "headerTitle": "Система отслеживания S3",
+        "skip": "Пропустить",
+        "pages": [
+            {
+                "title": "Доставка товаров теперь проще",
+                "description": "Теперь управление доставкой товаров стало проще, чем когда-либо.",
+                "image": "onboard1"
+            },
+            {
+                "title": "Отслеживание посылок безопаснее",
+                "description": "Отслеживание вашей посылки обеспечивает более безопасную доставку.",
+                "image": "onboard2"
+            },
+            {
+                "title": "Используйте баллы для выгодных предложений",
+                "description": "Рассмотрите возможность использования баллов для получения эксклюзивных предложений по доставке.",
+                "image": "onboard3"
+            }
+        ],
+        "button": {
+            "next": "Далее",
+            "start": "Начать"
+        },
+        "footer": {
+            "agreement": "Входя в систему, вы соглашаетесь с нашими Условиями обслуживания и Политикой конфиденциальности."
+        }
+    },
+    "shared": {
+        "pagination": {
+            "previous": "Назад",
+            "next": "Далее",
+            "page": "Страница {{currentPage}} из {{totalPages}}"
+        }
+    },
+    "home": {
+        "error": {
+            "fetchShipment": "Не удалось загрузить информацию о вашей отправке."
+        },
+        "header": {
+            "greeting": "Доброе утро, {{name}}",
+            "companySuffix": "Компания"
+        },
+        "summary": {
+            "currentPoint": "Текущая точка",
+            "wayName": "Название маршрута",
+            "detailsTitle": "Детали отправки",
+            "shipmentNumber": "Отправка #{{shipmentNumber}}",
+            "status": {
+                "complete": "ЗАВЕРШЕНА",
+                "pause": "ПАУЗА",
+                "current": "ТЕКУЩАЯ"
+            },
+            "description": {
+                "complete": "Отправка завершена",
+                "pause": "Готова к началу",
+                "current": "Отправка выполняется в данный момент"
+            },
+            "button": {
+                "movement": "Движение"
+            }
+        },
+        "boxes": {
+            "totalPoint": "Всего баллов",
+            "completed": "Завершено",
+            "remainder": "Остаток",
+            "progress": "Прогресс"
+        }
+    },
+    "shipments": {
+        "title": "Отправки",
+        "currentShipment": "Текущая отправка",
+        "finishedShipment": "Завершённая отправка",
+        "searchPlaceholder": "Поиск отправки",
+        "card": {
+            "shipmentNumber": "Отправка #{{shipmentNumber}}",
+            "showDetails": "Показать детали",
+            "points": "{{count}} Балл"
+        },
+        "status": {
+            "complete": "ЗАВЕРШЕНА",
+            "pause": "ПАУЗА",
+            "active": "АКТИВНА"
+        },
+        "error": {
+            "fetchShipments": "Не удалось загрузить ваши отправки."
+        },
+        "empty": "Отправки не найдены.",
+        "pagination": {
+            "previous": "Назад",
+            "next": "Далее",
+            "page": "Страница {{currentPage}} из {{totalPages}}"
+        }
+    },
+    "shipmentDetails": {
+        "error": {
+            "fetchDetails": "Не удалось загрузить детали вашей отправки."
+        },
+        "header": {
+            "title": "Отправка #{{shipmentNumber}}"
+        },
+        "button": {
+            "finished": "Завершена",
+            "movement": "Движение"
+        },
+        "details": {
+            "launchDate": "Дата отправления",
+            "currentPoint": "Текущая точка",
+            "points": "Баллы",
+            "pointCount": "{{count}} Балл",
+            "status": "Статус",
+            "arrival": "Прибытие"
+        },
+        "status": {
+            "complete": "ЗАВЕРШЕНА",
+            "pause": "ПАУЗА",
+            "current": "ТЕКУЩАЯ"
+        },
+        "timeline": {
+            "title": "Все точки и временная линия",
+            "currentPoint": "Текущая точка",
+            "completedPoint": "Завершённая точка",
+            "nextPoint": "Следующая точка",
+            "upcomingPoint": "Предстоящая точка"
+        },
+        "progress": {
+            "title": "Прогресс",
+            "stopsComplete": "Остановки завершены",
+            "remainderPoint": "Оставшиеся баллы"
+        },
+        "summary": {
+            "numberOfClient": "Количество клиентов",
+            "numberOfItems": "Количество позиций",
+            "clientLabel": "Клиент",
+            "itemsLabel": "Позиция",
+            "nextPoint": "Следующая точка"
+        },
+        "loading": {
+            "title": "Отправка"
+        }
+    },
+    "settings": {
+        "title": "Настройки",
+        "description": "Управляйте своим опытом приложения, конфиденциальностью и уведомлениями.",
+        "preferences": "Предпочтения",
+        "support": "Поддержка",
+        "darkMode": "Тёмная тема",
+        "language": "Язык",
+        "help": "Помощь",
+        "about": "О приложении",
+        "theme": {
+            "light": "Светлая",
+            "dark": "Тёмная"
+        },
+        "cancel": "Отмена"
+    },
+    "about": {
+        "title": "О S3 Tracking",
+        "subtitle": "Умная система отслеживания отправлений, созданная для быстрой и надежной логистики.",
+        "introTitle": "О системе",
+        "introText": "S3 Tracking разработан, чтобы сделать мониторинг отправлений простым и прозрачным для бизнеса и курьерских служб. Он объединяет статус отправления в реальном времени, прогресс маршрута и точки доставки в одном мобильном приложении.",
+        "teamTitle": "Информация о разработчике",
+        "teamText": "Это приложение было создано, чтобы упростить мониторинг отправлений и обеспечить большую прозрачность операций доставки.",
+        "developerName": "Abdulrhman Muneer Al-Jaidi",
+        "developerRole": "Инженер-программист (MERN Stack, Next.js, Nest.js, React Native & Expo)",
+        "contactTitle": "Контакт",
+        "contactText": "Для вопросов по разработке или поддержке используйте номер телефона или веб-сайт ниже."
+    }
+}

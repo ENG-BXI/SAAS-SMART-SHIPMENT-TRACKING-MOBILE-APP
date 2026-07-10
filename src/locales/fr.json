@@ -1,0 +1,200 @@
+{
+    "auth": {
+        "login": {
+            "title": "Connexion",
+            "subtitle": "Saisissez votre e-mail et votre mot de passe pour vous connecter.",
+            "fields": {
+                "email": "E-mail",
+                "password": "Mot de passe"
+            },
+            "button": {
+                "continue": "Continuer"
+            },
+            "sections": {
+                "credentials": {
+                    "title": "Identifiants",
+                    "description": "Utilisez votre e-mail et votre mot de passe enregistrés."
+                }
+            },
+            "validation": {
+                "emailRequired": "L'e-mail est obligatoire.",
+                "emailInvalid": "Saisissez une adresse e-mail valide.",
+                "emailMin": "L'e-mail doit comporter plus de 3 lettres.",
+                "passwordRequired": "Le mot de passe est obligatoire.",
+                "passwordMin": "Le mot de passe doit comporter au moins 8 caractères.",
+                "passwordMax": "Le mot de passe doit comporter moins de 100 caractères."
+            },
+            "errors": {
+                "unexpected": "Une erreur inattendue s'est produite."
+            }
+        }
+    },
+    "onboarding": {
+        "headerTitle": "Système de suivi S3",
+        "skip": "Passer",
+        "pages": [
+            {
+                "title": "La livraison de marchandises est désormais plus facile",
+                "description": "Désormais, gérer la livraison de marchandises n'a jamais été aussi simple.",
+                "image": "onboard1"
+            },
+            {
+                "title": "Le suivi des colis est plus sûr",
+                "description": "Suivre votre colis garantit une expérience de livraison plus sûre.",
+                "image": "onboard2"
+            },
+            {
+                "title": "Utilisez des points pour des offres d'expédition",
+                "description": "Pensez à utiliser des points pour débloquer des offres d'expédition exclusives.",
+                "image": "onboard3"
+            }
+        ],
+        "button": {
+            "next": "Suivant",
+            "start": "Commencer"
+        },
+        "footer": {
+            "agreement": "En vous connectant, vous acceptez nos Conditions d'utilisation et notre Politique de confidentialité."
+        }
+    },
+    "shared": {
+        "pagination": {
+            "previous": "Précédent",
+            "next": "Suivant",
+            "page": "Page {{currentPage}} sur {{totalPages}}"
+        }
+    },
+    "home": {
+        "error": {
+            "fetchShipment": "Nous n'avons pas pu récupérer les informations de votre envoi."
+        },
+        "header": {
+            "greeting": "Bonjour, {{name}}",
+            "companySuffix": "Entreprise"
+        },
+        "summary": {
+            "currentPoint": "Point actuel",
+            "wayName": "Nom de l'itinéraire",
+            "detailsTitle": "Détails de l'envoi",
+            "shipmentNumber": "Envoi #{{shipmentNumber}}",
+            "status": {
+                "complete": "TERMINÉ",
+                "pause": "PAUSE",
+                "current": "EN COURS"
+            },
+            "description": {
+                "complete": "L'envoi est terminé",
+                "pause": "Prêt à commencer",
+                "current": "L'envoi est actuellement en cours"
+            },
+            "button": {
+                "movement": "Mouvement"
+            }
+        },
+        "boxes": {
+            "totalPoint": "Point total",
+            "completed": "Terminé",
+            "remainder": "Restant",
+            "progress": "Progression"
+        }
+    },
+    "shipments": {
+        "title": "Envois",
+        "currentShipment": "Envoi en cours",
+        "finishedShipment": "Envoi terminé",
+        "searchPlaceholder": "Rechercher un envoi",
+        "card": {
+            "shipmentNumber": "Envoi #{{shipmentNumber}}",
+            "showDetails": "Afficher les détails",
+            "points": "{{count}} Point"
+        },
+        "status": {
+            "complete": "TERMINÉ",
+            "pause": "PAUSE",
+            "active": "ACTIF"
+        },
+        "error": {
+            "fetchShipments": "Nous n'avons pas pu récupérer vos envois."
+        },
+        "empty": "Aucun envoi trouvé.",
+        "pagination": {
+            "previous": "Précédent",
+            "next": "Suivant",
+            "page": "Page {{currentPage}} sur {{totalPages}}"
+        }
+    },
+    "shipmentDetails": {
+        "error": {
+            "fetchDetails": "Nous n'avons pas pu récupérer les détails de votre envoi."
+        },
+        "header": {
+            "title": "Envoi #{{shipmentNumber}}"
+        },
+        "button": {
+            "finished": "Terminé",
+            "movement": "Mouvement"
+        },
+        "details": {
+            "launchDate": "Date de lancement",
+            "currentPoint": "Point actuel",
+            "points": "Points",
+            "pointCount": "{{count}} Point",
+            "status": "Statut",
+            "arrival": "Arrivée"
+        },
+        "status": {
+            "complete": "TERMINÉ",
+            "pause": "PAUSE",
+            "current": "EN COURS"
+        },
+        "timeline": {
+            "title": "Tous les points et la chronologie",
+            "currentPoint": "Point actuel",
+            "completedPoint": "Point terminé",
+            "nextPoint": "Point suivant",
+            "upcomingPoint": "Point à venir"
+        },
+        "progress": {
+            "title": "Progression",
+            "stopsComplete": "Arrêts terminés",
+            "remainderPoint": "Point restant"
+        },
+        "summary": {
+            "numberOfClient": "Nombre de clients",
+            "numberOfItems": "Nombre d'articles",
+            "clientLabel": "Client",
+            "itemsLabel": "Article",
+            "nextPoint": "Point suivant"
+        },
+        "loading": {
+            "title": "Envoi"
+        }
+    },
+    "settings": {
+        "title": "Paramètres",
+        "description": "Contrôlez votre expérience d'application, votre confidentialité et vos notifications.",
+        "preferences": "Préférences",
+        "support": "Support",
+        "darkMode": "Mode sombre",
+        "language": "Langue",
+        "help": "Aide",
+        "about": "À propos",
+        "theme": {
+            "light": "Clair",
+            "dark": "Sombre"
+        },
+        "cancel": "Annuler"
+    },
+    "about": {
+        "title": "À propos de S3 Tracking",
+        "subtitle": "Un système intelligent de suivi des envois conçu pour une logistique rapide et fiable.",
+        "introTitle": "À propos du système",
+        "introText": "S3 Tracking est conçu pour rendre le suivi des envois simple et transparent pour les entreprises et les équipes de livraison. Il rassemble l'état de l'envoi en temps réel, l'avancement de la route et les points de livraison dans une seule expérience mobile.",
+        "teamTitle": "Informations du développeur",
+        "teamText": "Cette application a été créée pour simplifier le suivi des envois et offrir une visibilité plus claire sur les opérations de livraison.",
+        "developerName": "Abdulrhman Muneer Al-Jaidi",
+        "developerRole": "Ingénieur logiciel (MERN Stack, Next.js, Nest.js, React Native & Expo)",
+        "contactTitle": "Contact",
+        "contactText": "Pour des questions de développement ou de support, utilisez le numéro de téléphone ou le site ci-dessous."
+    }
+}

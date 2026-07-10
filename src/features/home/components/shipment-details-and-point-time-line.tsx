@@ -7,7 +7,10 @@ import {Button} from '@/components/ui/button';
 import {timelineData} from '../type';
 import PointTimeLine from '@/components/point-time-line';
 import {useTranslation} from 'react-i18next';
+import {useMoveShipment} from '@/features/shipments/api';
+import {AntDesign} from '@expo/vector-icons';
 interface ShipmentDetailsAndPointTimeLineProps {
+  id?: string;
   shipmentNumber?: string;
   currentPointName?: string;
   isCompleted?: boolean;
@@ -21,11 +24,15 @@ interface ShipmentDetailsAndPointTimeLineProps {
     wayId: string;
   }[];
 }
-function ShipmentDetailsAndPointTimeLine({shipmentNumber, currentPointName, isCompleted, isPaused, points}: ShipmentDetailsAndPointTimeLineProps) {
+function ShipmentDetailsAndPointTimeLine({id, shipmentNumber, currentPointName, isCompleted, isPaused, points}: ShipmentDetailsAndPointTimeLineProps) {
   const {t} = useTranslation();
   const status = isCompleted ? t('home.summary.status.complete') : isPaused ? t('home.summary.status.pause') : t('home.summary.status.current');
   const des = isCompleted ? t('home.summary.description.complete') : isPaused ? t('home.summary.description.pause') : t('home.summary.description.current');
   const isFinish = isCompleted;
+  const {mutate, isPending} = useMoveShipment(id!);
+  function handleMovement() {
+    mutate();
+  }
   return (
     <Card>
       <CardContent className='px-2 pb-2 bg-[#F2F5F8] dark:bg-slate-950'>
@@ -42,8 +49,8 @@ function ShipmentDetailsAndPointTimeLine({shipmentNumber, currentPointName, isCo
               <Text className='text-black dark:text-white'>{t('shipmentDetails.button.finished')}</Text>
             </Button>
           ) : (
-            <Button variant={'primary'} size={'lg'} className=''>
-              <Text className='text-white'>{t('shipmentDetails.button.movement')}</Text>
+            <Button onPress={handleMovement} variant={'primary'} size={'lg'} className=''>
+              {isPending ? <AntDesign name='loading-3-quarters' className='animate-spin' size={24} color='black' /> : <Text className='text-white'>{t('shipmentDetails.button.movement')}</Text>}
             </Button>
           )}
         </View>
