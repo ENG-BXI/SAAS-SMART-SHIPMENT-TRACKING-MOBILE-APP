@@ -97,4 +97,4 @@ The mobile app supports translations for the settings screen, onboarding, shipme
 
 ## License
 
-This repo is currently private.
+This repo is currently public.
